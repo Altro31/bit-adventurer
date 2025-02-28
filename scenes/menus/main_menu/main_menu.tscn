@@ -1,12 +1,45 @@
-[gd_scene load_steps=5 format=3 uid="uid://byvydukidk6i2"]
+[gd_scene load_steps=2 format=3 uid="uid://byvydukidk6i2"]
 
-[ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_pss7b"]
 [ext_resource type="Script" path="res://scenes/menus/main_menu/main_menu.gd" id="2_lk0wa"]
-[ext_resource type="PackedScene" uid="uid://bdvdf5v87mmrr" path="res://scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_lqjmk"]
-[ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://scenes/credits/credits.tscn" id="3_vmius"]
 
-[node name="MainMenu" instance=ExtResource("1_pss7b")]
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("2_lk0wa")
-game_scene_path = "res://scenes/game_scene/game_ui.tscn"
-options_packed_scene = ExtResource("3_lqjmk")
-credits_packed_scene = ExtResource("3_vmius")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 44.0
+offset_right = 226.0
+offset_bottom = 145.0
+
+[node name="Start" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Start"
+
+[node name="Credits" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Credits"
+
+[node name="Exit" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="pressed" from="Buttons/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Buttons/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]

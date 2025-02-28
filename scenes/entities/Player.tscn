@@ -1,0 +1,157 @@
+[gd_scene load_steps=25 format=3 uid="uid://b6xxovxgrmn5l"]
+
+[ext_resource type="Script" path="res://scenes/entities/player.gd" id="1_ewah0"]
+[ext_resource type="Texture2D" uid="uid://css0go1ke13xu" path="res://assets/PNG/character_berie_death_1.png" id="2_yuxxj"]
+[ext_resource type="Texture2D" uid="uid://dnsav1eabrltd" path="res://assets/PNG/character_berie_death_2.png" id="3_knrl1"]
+[ext_resource type="Texture2D" uid="uid://nrbtdfertc5" path="res://assets/PNG/character_berie_death_3.png" id="4_nv2vl"]
+[ext_resource type="Texture2D" uid="uid://diighkkei4u2e" path="res://assets/PNG/character_berie_death_4.png" id="5_juklt"]
+[ext_resource type="Texture2D" uid="uid://dwpq35olil2ju" path="res://assets/PNG/character_berie_fall_1.png" id="6_33o3y"]
+[ext_resource type="Texture2D" uid="uid://8orbjrhl0qda" path="res://assets/PNG/character_berie_fall_2.png" id="7_cyku1"]
+[ext_resource type="Texture2D" uid="uid://c44257t2pa73p" path="res://assets/PNG/character_berie_idle_1.png" id="8_3k8cj"]
+[ext_resource type="Texture2D" uid="uid://bj8kf5s0a7sxc" path="res://assets/PNG/character_berie_idle_2.png" id="9_ox76o"]
+[ext_resource type="Texture2D" uid="uid://cybe2kdwi7jdr" path="res://assets/PNG/character_berie_idle_3.png" id="10_poq11"]
+[ext_resource type="Texture2D" uid="uid://bvyuvpsr6dt5u" path="res://assets/PNG/character_berie_idle_4.png" id="11_0dfcq"]
+[ext_resource type="Texture2D" uid="uid://dn7om2hjhqvie" path="res://assets/PNG/character_berie_jump_1.png" id="12_0jros"]
+[ext_resource type="Texture2D" uid="uid://cwj4wowu78vwt" path="res://assets/PNG/character_berie_jump_2.png" id="13_b4dt5"]
+[ext_resource type="Texture2D" uid="uid://bh837pve8q7i3" path="res://assets/PNG/character_berie_jump_3.png" id="14_fufgs"]
+[ext_resource type="Texture2D" uid="uid://1py7xbg1b108" path="res://assets/PNG/character_berie_jump_4.png" id="15_hi4as"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f77ga"]
+load_path = "res://.godot/imported/character_berie_run_1.png-6e27a43559f257622012cd877456d966.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7yc1e"]
+load_path = "res://.godot/imported/character_berie_run_2.png-9b4784705b929845b7c0608acedd091d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sq74c"]
+load_path = "res://.godot/imported/character_berie_run_3.png-77150b8b4f471d7c96b4807c29c04d48.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a87qh"]
+load_path = "res://.godot/imported/character_berie_run_4.png-e4476d24a726679d8bb319d87cbf17a5.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hneax"]
+load_path = "res://.godot/imported/character_berie_run_5.png-8314569cae44678a7910be7390406dff.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wm1eg"]
+load_path = "res://.godot/imported/character_berie_run_6.png-e49547cafd2b5034fa22b9ea211ee39a.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4msg4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yuxxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_knrl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nv2vl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_juklt")
+}],
+"loop": false,
+"name": &"death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_33o3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cyku1")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_3k8cj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ox76o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_poq11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0dfcq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_0jros")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_b4dt5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fufgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_hi4as")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_f77ga")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_7yc1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_sq74c")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_a87qh")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_hneax")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_wm1eg")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_at4ny"]
+radius = 8.0
+height = 32.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkn02"]
+size = Vector2(14, 6)
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 31
+platform_floor_layers = 4294967268
+platform_wall_layers = 4
+script = ExtResource("1_ewah0")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -9)
+sprite_frames = SubResource("SpriteFrames_4msg4")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_at4ny")
+
+[node name="HitPoint" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="HitPoint"]
+position = Vector2(1, 18)
+shape = SubResource("RectangleShape2D_mkn02")
+
+[connection signal="animation_finished" from="Sprite" to="." method="_on_finished"]
+[connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
+[connection signal="body_entered" from="HitPoint" to="." method="_on_hit_body_entered"]

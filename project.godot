@@ -14,6 +14,7 @@ config/name="Bit Adventurer"
 config/version="0.0.1"
 run/main_scene="res://scenes/menus/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+run/max_fps=60
 config/icon="res://icon.svg"
 
 [autoload]
@@ -21,16 +22,51 @@ config/icon="res://icon.svg"
 AppConfig="*res://addons/maaacks_game_template/base/scenes/autoloads/app_config.tscn"
 SceneLoader="*res://addons/maaacks_game_template/base/scenes/autoloads/scene_loader.tscn"
 ProjectMusicController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_music_controller.tscn"
+GLOBAL="*res://scripts/GLOBAL.gd"
 ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
+
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=180
+window/size/mode=3
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/maaacks_game_template/plugin.cfg")
+enabled=PackedStringArray()
 
 [internationalization]
 
 locale/translations=PackedStringArray("res://addons/maaacks_game_template/base/translations/menus_translations.en.translation", "res://addons/maaacks_game_template/base/translations/menus_translations.fr.translation")
 
+[layer_names]
+
+2d_render/layer_1="Player"
+2d_render/layer_2="Enemy"
+2d_render/layer_3="Environment"
+2d_render/layer_4="Object"
+2d_render/layer_5="Trap"
+2d_physics/layer_1="Player"
+2d_navigation/layer_1="Player"
+2d_physics/layer_2="Enemy"
+2d_navigation/layer_2="Enemy"
+2d_physics/layer_3="Environment"
+2d_navigation/layer_3="Environment"
+2d_physics/layer_4="Object"
+2d_navigation/layer_4="Object"
+2d_physics/layer_5="Trap"
+2d_navigation/layer_5="Trap"
+
 [maaacks_game_template]
 
 disable_plugin_dialogues=true
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+anti_aliasing/screen_space_roughness_limiter/enabled=false
+lights_and_shadows/positional_shadow/atlas_quadrant_0_subdiv=0
+lights_and_shadows/positional_shadow/atlas_quadrant_1_subdiv=0
+lights_and_shadows/positional_shadow/atlas_quadrant_2_subdiv=0
+lights_and_shadows/positional_shadow/atlas_quadrant_3_subdiv=0

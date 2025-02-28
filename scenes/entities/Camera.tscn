@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cevttteursd20"]
+
+[ext_resource type="Script" path="res://scenes/entities/camera.gd" id="1_g0ma4"]
+
+[node name="Camera" type="Camera2D"]
+position = Vector2(0, 2)
+position_smoothing_enabled = true
+drag_vertical_enabled = true
+drag_top_margin = 1.0
+script = ExtResource("1_g0ma4")

@@ -1,0 +1,68 @@
+[gd_scene load_steps=12 format=3 uid="uid://v53bn0mybp0y"]
+
+[ext_resource type="Script" path="res://scenes/entities/coin.gd" id="1_qd7hd"]
+[ext_resource type="Texture2D" uid="uid://dud4n3fy2uqkw" path="res://addons/PNG/vfx_effect_coin_1.png" id="2_62bn4"]
+[ext_resource type="Texture2D" uid="uid://dgeu0f8kg7y84" path="res://addons/PNG/vfx_effect_coin_2.png" id="3_n68xc"]
+[ext_resource type="Texture2D" uid="uid://b2t1ql146nm3v" path="res://addons/PNG/vfx_effect_coin_3.png" id="4_rwe5g"]
+[ext_resource type="Texture2D" uid="uid://c3oplal6x8cqh" path="res://addons/PNG/vfx_effect_coin_4.png" id="5_y5crv"]
+[ext_resource type="Texture2D" uid="uid://c88nty4n4jppw" path="res://addons/PNG/collectibles_coin_gold_1.png" id="6_nvaam"]
+[ext_resource type="Texture2D" uid="uid://y34lffsj311h" path="res://addons/PNG/collectibles_coin_gold_2.png" id="7_tyafa"]
+[ext_resource type="Texture2D" uid="uid://b5gujgl4qjq86" path="res://addons/PNG/collectibles_coin_gold_3.png" id="8_gawh4"]
+[ext_resource type="Texture2D" uid="uid://c5n8imcuch8ia" path="res://addons/PNG/collectibles_coin_gold_4.png" id="9_qnkrf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o0f6j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_62bn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n68xc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rwe5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_y5crv")
+}],
+"loop": false,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_nvaam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tyafa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gawh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qnkrf")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6l7a"]
+size = Vector2(27, 26)
+
+[node name="Coin" type="Area2D"]
+collision_layer = 8
+monitorable = false
+script = ExtResource("1_qd7hd")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(155, 89)
+sprite_frames = SubResource("SpriteFrames_o0f6j")
+animation = &"on"
+autoplay = "on"
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(155.5, 89)
+shape = SubResource("RectangleShape2D_x6l7a")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

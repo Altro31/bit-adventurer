@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://ciebf7nt68mck"]
+
+[ext_resource type="Script" path="res://scenes/entities/spike.gd" id="1_0rjjj"]
+[ext_resource type="Texture2D" uid="uid://c6ivvs4i8ipr3" path="res://assets/PNG/trap_spike_1.png" id="2_4pbyd"]
+[ext_resource type="Texture2D" uid="uid://brcmtwknrj6t4" path="res://assets/PNG/trap_spike_2.png" id="3_en7qt"]
+[ext_resource type="Texture2D" uid="uid://dh8roe2wb4i7n" path="res://assets/PNG/trap_spike_3.png" id="4_s0ir7"]
+[ext_resource type="Texture2D" uid="uid://dbatshyg074uw" path="res://assets/PNG/trap_spike_4.png" id="5_7faac"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o0f6j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4pbyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_en7qt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s0ir7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7faac")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6l7a"]
+size = Vector2(27, 14)
+
+[node name="Spike" type="Area2D"]
+collision_layer = 8
+monitorable = false
+script = ExtResource("1_0rjjj")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 2)
+sprite_frames = SubResource("SpriteFrames_o0f6j")
+animation = &"on"
+autoplay = "on"
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_x6l7a")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

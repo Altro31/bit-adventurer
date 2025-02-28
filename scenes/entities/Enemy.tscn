@@ -1,0 +1,183 @@
+[gd_scene load_steps=25 format=3 uid="uid://dv83t773uhgn2"]
+
+[ext_resource type="Script" path="res://scenes/entities/enemy.gd" id="1_pq6es"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4oan8"]
+load_path = "res://.godot/imported/character_enemy_sandbug_death_1.png-1cca26ebc43d0ceb8f905981aab1e5c5.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_258jh"]
+load_path = "res://.godot/imported/character_enemy_sandbug_death_2.png-a1e526c278c1d374ab898e8767aea49b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pnp78"]
+load_path = "res://.godot/imported/character_enemy_sandbug_death_3.png-fb922ba4d41e6e660eb814d44047c44c.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_doqk7"]
+load_path = "res://.godot/imported/character_enemy_sandbug_death_4.png-62d32cdf5caa6eb4507da92f1c126bef.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bc0f0"]
+load_path = "res://.godot/imported/character_enemy_sandbug_idle_1.png-6ea898f047fa613c5b5892844540b015.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qnj0v"]
+load_path = "res://.godot/imported/character_enemy_sandbug_idle_2.png-e20906ab481668600d1e4eb7dfa60132.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yxjrv"]
+load_path = "res://.godot/imported/character_enemy_sandbug_idle_3.png-fa30222848a1d841f553b994c048a0b2.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qioic"]
+load_path = "res://.godot/imported/character_enemy_sandbug_idle_4.png-22685876ada568b6e73b62dce3bfec13.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_153i5"]
+load_path = "res://.godot/imported/character_enemy_sandbug_spawn_1.png-d15675c7a2327e753cb80c68d215e3d8.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gpf34"]
+load_path = "res://.godot/imported/character_enemy_sandbug_spawn_2.png-8104f7b85b738db588622ca8a33188b3.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ggs6h"]
+load_path = "res://.godot/imported/character_enemy_sandbug_spawn_3.png-4ce796e02819e7387b663c6098f535ce.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6hlt1"]
+load_path = "res://.godot/imported/character_enemy_sandbug_spawn_4.png-11110fa518dfacbd4f48c52a4c163224.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yrx85"]
+load_path = "res://.godot/imported/character_enemy_sandbug_spawn_5.png-c4b0cd8ff45689e24e6424df709e9c86.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pvmkd"]
+load_path = "res://.godot/imported/character_enemy_sandbug_spawn_6.png-368d2f887035492804fc7ec209d4d0f1.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ko0cc"]
+load_path = "res://.godot/imported/character_enemy_sandbug_spawn_7.png-4dddd3b4f29fb96bd89c1b35cb19c893.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cc8yp"]
+load_path = "res://.godot/imported/character_enemy_sandbug_spawn_8.png-185640e4549e3277357cfb61130045d5.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l5pkm"]
+load_path = "res://.godot/imported/character_enemy_sandbug_walk_1.png-db430c06c705202cdcb2a086e914f3d4.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_afhb5"]
+load_path = "res://.godot/imported/character_enemy_sandbug_walk_2.png-ba61ea3d72fc7432ca09d090b6f3ff9e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ogxmt"]
+load_path = "res://.godot/imported/character_enemy_sandbug_walk_3.png-e19107aff1378a0ee0e310c1de5aaf53.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ptek1"]
+load_path = "res://.godot/imported/character_enemy_sandbug_walk_4.png-c2b9094c0424cde6f5c14a364beb583b.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uxfht"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_4oan8")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_258jh")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_pnp78")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_doqk7")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_bc0f0")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_qnj0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_yxjrv")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_qioic")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_153i5")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_gpf34")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_ggs6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_6hlt1")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_yrx85")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_pvmkd")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_ko0cc")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_cc8yp")
+}],
+"loop": false,
+"name": &"spawn",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_l5pkm")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_afhb5")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_ogxmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_ptek1")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bnjya"]
+size = Vector2(19.4063, 4.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ob3xy"]
+size = Vector2(12.25, 8)
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 5
+platform_floor_layers = 4278190084
+platform_wall_layers = 4
+script = ExtResource("1_pq6es")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -24)
+sprite_frames = SubResource("SpriteFrames_uxfht")
+animation = &"death"
+autoplay = "walk"
+
+[node name="RayGround" type="RayCast2D" parent="Sprite"]
+position = Vector2(9, 24)
+target_position = Vector2(0, 10)
+collision_mask = 4
+
+[node name="AreaHit" type="Area2D" parent="Sprite"]
+
+[node name="Collision" type="CollisionShape2D" parent="Sprite/AreaHit"]
+position = Vector2(0.296875, 18.8125)
+shape = SubResource("RectangleShape2D_bnjya")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_ob3xy")
+
+[connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
+[connection signal="body_entered" from="Sprite/AreaHit" to="." method="_on_area_hit_body_entered"]
