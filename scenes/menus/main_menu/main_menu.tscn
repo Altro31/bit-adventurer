@@ -22,7 +22,7 @@ expand_mode = 1
 
 [node name="Buttons" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 100.0
+offset_left = 96.0
 offset_top = 44.0
 offset_right = 226.0
 offset_bottom = 145.0
@@ -38,6 +38,16 @@ text = "Credits"
 [node name="Exit" type="Button" parent="Buttons"]
 layout_mode = 2
 text = "Exit"
+
+[node name="title" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 24.0
+
+[node name="title1" type="Label" parent="title"]
+layout_mode = 2
+text = "Bit Adventure"
+horizontal_alignment = 1
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="Buttons/Start" to="." method="_on_start_pressed"]
