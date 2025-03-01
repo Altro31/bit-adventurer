@@ -1,9 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://bde0cbmryrv5s"]
+[gd_scene load_steps=6 format=3 uid="uid://bde0cbmryrv5s"]
 
 [ext_resource type="Script" path="res://scenes/game_scene/game_ui.gd" id="2_dvsvq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hck5n"]
 font_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_lgey8"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_n6rwg"]
+font_size = 10
+
+[sub_resource type="Theme" id="Theme_o7nrm"]
+default_font_size = 8
 
 [node name="GUI" type="CanvasLayer"]
 process_mode = 3
@@ -20,6 +29,7 @@ label_settings = SubResource("LabelSettings_hck5n")
 horizontal_alignment = 1
 
 [node name="GameOver" type="ColorRect" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
@@ -53,5 +63,99 @@ offset_right = 261.0
 offset_bottom = 153.0
 text = "Exit"
 
+[node name="Win" type="ColorRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0843947, 0.342769, 0.220552, 0.976471)
+
+[node name="Label" type="Label" parent="Win"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 47.0
+offset_right = 255.0
+offset_bottom = 89.0
+text = "Ganaste 🥳"
+label_settings = SubResource("LabelSettings_lgey8")
+autowrap_mode = 1
+
+[node name="Next" type="Button" parent="Win"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 123.0
+offset_right = 262.0
+offset_bottom = 154.0
+text = "Siguiente
+"
+
+[node name="Menu" type="Button" parent="Win"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 123.0
+offset_right = 154.0
+offset_bottom = 154.0
+text = "Menú"
+
+[node name="PauseUI" type="ColorRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0843947, 0.342769, 0.220552, 0.976471)
+
+[node name="Label" type="Label" parent="PauseUI"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 47.0
+offset_right = 255.0
+offset_bottom = 89.0
+text = "Ganaste 🥳"
+label_settings = SubResource("LabelSettings_lgey8")
+autowrap_mode = 1
+
+[node name="Next" type="Button" parent="PauseUI"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 123.0
+offset_right = 262.0
+offset_bottom = 154.0
+text = "Siguiente
+"
+
+[node name="Menu" type="Button" parent="PauseUI"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 123.0
+offset_right = 154.0
+offset_bottom = 154.0
+text = "Menú"
+
+[node name="Level" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 71.0
+offset_bottom = 27.0
+text = "nivel: <level>"
+label_settings = SubResource("LabelSettings_n6rwg")
+
+[node name="Pause" type="Button" parent="."]
+offset_left = 300.0
+offset_top = 5.0
+offset_right = 317.0
+offset_bottom = 25.0
+theme = SubResource("Theme_o7nrm")
+text = "||"
+
 [connection signal="pressed" from="GameOver/Restart" to="." method="_on_restart"]
 [connection signal="pressed" from="GameOver/Exit" to="." method="_on_exit"]
+[connection signal="pressed" from="Win/Next" to="." method="_on_restart"]
+[connection signal="pressed" from="Win/Menu" to="." method="_on_menu"]
+[connection signal="pressed" from="PauseUI/Next" to="." method="_on_restart"]
+[connection signal="pressed" from="PauseUI/Menu" to="." method="_on_menu"]

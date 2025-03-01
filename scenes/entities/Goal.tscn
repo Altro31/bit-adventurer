@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4bh7pnxcgtcu"]
+
+[ext_resource type="Script" path="res://scenes/entities/goal.gd" id="1_q0vew"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_w30kg"]
+b = Vector2(0, 179)
+
+[node name="Goal" type="Area2D"]
+script = ExtResource("1_q0vew")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_w30kg")
+
+[connection signal="body_entered" from="." to="." method="body_entered"]
