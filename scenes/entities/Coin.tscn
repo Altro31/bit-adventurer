@@ -51,19 +51,18 @@ animations = [{
 size = Vector2(27, 26)
 
 [node name="Coin" type="Area2D"]
-position = Vector2(57, 53)
+position = Vector2(0, -1)
 collision_layer = 8
-monitorable = false
 script = ExtResource("1_qd7hd")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(155, 89)
+position = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_o0f6j")
 animation = &"off"
 autoplay = "on"
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(155.5, 89)
+position = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_x6l7a")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_player_entered"]

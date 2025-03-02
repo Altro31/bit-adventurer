@@ -310,6 +310,7 @@ position = Vector2(160, 88)
 player = NodePath("../Player")
 
 [node name="GUI" parent="." instance=ExtResource("2_25nwi")]
+next_level = "res://scenes/game_scene/levels/level_2.tscn"
 
 [node name="Enemies" type="Node" parent="."]
 

@@ -1,5 +1,9 @@
 extends Area2D
 
-func _on_body_entered():
-	$Sprite.set_animation("off")
-	GLOBAL.score += 100
+@export var score: int = 50
+
+func _on_player_entered(body):
+	if body is Player:
+		$Sprite.set_animation("off")
+		$Collision.set_deferred("disabled",true)
+		GLOBAL.score += score

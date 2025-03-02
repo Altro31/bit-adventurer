@@ -6,7 +6,7 @@
 font_size = 10
 
 [sub_resource type="LabelSettings" id="LabelSettings_lgey8"]
-font_size = 30
+font_size = 31
 
 [sub_resource type="LabelSettings" id="LabelSettings_n6rwg"]
 font_size = 10
@@ -65,7 +65,7 @@ text = "Exit"
 
 [node name="Win" type="ColorRect" parent="."]
 visible = false
-modulate = Color(1, 1, 1, 0)
+modulate = Color(1, 1, 1, 0.00784314)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -75,11 +75,11 @@ color = Color(0.0843947, 0.342769, 0.220552, 0.976471)
 
 [node name="Label" type="Label" parent="Win"]
 layout_mode = 0
-offset_left = 83.0
-offset_top = 47.0
-offset_right = 255.0
-offset_bottom = 89.0
-text = "Ganaste 🥳"
+offset_left = 89.0
+offset_top = 44.0
+offset_right = 246.0
+offset_bottom = 88.0
+text = "Ganaste!!!"
 label_settings = SubResource("LabelSettings_lgey8")
 autowrap_mode = 1
 
@@ -102,39 +102,41 @@ text = "Menú"
 
 [node name="PauseUI" type="ColorRect" parent="."]
 visible = false
-modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0843947, 0.342769, 0.220552, 0.976471)
+color = Color(0.027451, 0.0196078, 0.0196078, 0.537255)
 
 [node name="Label" type="Label" parent="PauseUI"]
 layout_mode = 0
-offset_left = 83.0
-offset_top = 47.0
-offset_right = 255.0
-offset_bottom = 89.0
-text = "Ganaste 🥳"
+offset_left = 129.0
+offset_top = 24.0
+offset_right = 186.0
+offset_bottom = 53.0
+text = "Pausa"
 label_settings = SubResource("LabelSettings_lgey8")
 autowrap_mode = 1
 
-[node name="Next" type="Button" parent="PauseUI"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseUI"]
 layout_mode = 0
-offset_left = 177.0
-offset_top = 123.0
-offset_right = 262.0
-offset_bottom = 154.0
-text = "Siguiente
+offset_left = 115.0
+offset_top = 63.0
+offset_right = 201.0
+offset_bottom = 164.0
+
+[node name="Resume" type="Button" parent="PauseUI/VBoxContainer"]
+layout_mode = 2
+text = "Continuar
 "
 
-[node name="Menu" type="Button" parent="PauseUI"]
-layout_mode = 0
-offset_left = 69.0
-offset_top = 123.0
-offset_right = 154.0
-offset_bottom = 154.0
+[node name="Restart" type="Button" parent="PauseUI/VBoxContainer"]
+layout_mode = 2
+text = "Reiniciar"
+
+[node name="Menu" type="Button" parent="PauseUI/VBoxContainer"]
+layout_mode = 2
 text = "Menú"
 
 [node name="Level" type="Label" parent="."]
@@ -155,7 +157,9 @@ text = "||"
 
 [connection signal="pressed" from="GameOver/Restart" to="." method="_on_restart"]
 [connection signal="pressed" from="GameOver/Exit" to="." method="_on_exit"]
-[connection signal="pressed" from="Win/Next" to="." method="_on_restart"]
+[connection signal="pressed" from="Win/Next" to="." method="_on_next"]
 [connection signal="pressed" from="Win/Menu" to="." method="_on_menu"]
-[connection signal="pressed" from="PauseUI/Next" to="." method="_on_restart"]
-[connection signal="pressed" from="PauseUI/Menu" to="." method="_on_menu"]
+[connection signal="pressed" from="PauseUI/VBoxContainer/Resume" to="." method="_on_resume"]
+[connection signal="pressed" from="PauseUI/VBoxContainer/Restart" to="." method="_on_restart"]
+[connection signal="pressed" from="PauseUI/VBoxContainer/Menu" to="." method="_on_menu"]
+[connection signal="pressed" from="Pause" to="." method="_on_pause"]

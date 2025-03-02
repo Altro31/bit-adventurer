@@ -15,18 +15,12 @@
 [ext_resource type="Texture2D" uid="uid://cwj4wowu78vwt" path="res://assets/PNG/character_berie_jump_2.png" id="13_b4dt5"]
 [ext_resource type="Texture2D" uid="uid://bh837pve8q7i3" path="res://assets/PNG/character_berie_jump_3.png" id="14_fufgs"]
 [ext_resource type="Texture2D" uid="uid://1py7xbg1b108" path="res://assets/PNG/character_berie_jump_4.png" id="15_hi4as"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f77ga"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7yc1e"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sq74c"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a87qh"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hneax"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wm1eg"]
+[ext_resource type="Texture2D" uid="uid://o1qbi1wltwcc" path="res://assets/PNG/character_berie_run_1.png" id="16_4h3wq"]
+[ext_resource type="Texture2D" uid="uid://dwwgqschof8n0" path="res://assets/PNG/character_berie_run_2.png" id="17_5cbmc"]
+[ext_resource type="Texture2D" uid="uid://b1yhfqigvesby" path="res://assets/PNG/character_berie_run_3.png" id="18_d7g0j"]
+[ext_resource type="Texture2D" uid="uid://bvm65b37dadgg" path="res://assets/PNG/character_berie_run_4.png" id="19_lrmld"]
+[ext_resource type="Texture2D" uid="uid://yihsnqnbyxof" path="res://assets/PNG/character_berie_run_5.png" id="20_vukd2"]
+[ext_resource type="Texture2D" uid="uid://b1rsy4ic1havq" path="res://assets/PNG/character_berie_run_6.png" id="21_vom8r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4msg4"]
 animations = [{
@@ -94,22 +88,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("16_4t3b6")
+"texture": ExtResource("16_4h3wq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_3fpir")
+"texture": ExtResource("17_5cbmc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_h2xuw")
+"texture": ExtResource("18_d7g0j")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_wc66a")
+"texture": ExtResource("19_lrmld")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_fkwry")
+"texture": ExtResource("20_vukd2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("21_qek5k")
+"texture": ExtResource("21_vom8r")
 }],
 "loop": true,
 "name": &"run",
@@ -117,8 +111,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_at4ny"]
-radius = 9.0
-height = 26.0
+radius = 8.0
+height = 28.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkn02"]
 size = Vector2(14, 6)
@@ -136,15 +130,14 @@ animation = &"run"
 autoplay = "idle"
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 1)
+position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_at4ny")
 
 [node name="HitPoint" type="Area2D" parent="."]
-position = Vector2(-1, 0)
 collision_mask = 2
 
 [node name="Collision" type="CollisionShape2D" parent="HitPoint"]
-position = Vector2(0, 18)
+position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_mkn02")
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_finished"]
