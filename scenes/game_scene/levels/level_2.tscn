@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://3fmmpu012sd7"]
+[gd_scene load_steps=10 format=4 uid="uid://3fmmpu012sd7"]
 
 [ext_resource type="Script" path="res://scenes/game_scene/levels/level.gd" id="1_p01r0"]
 [ext_resource type="Texture2D" uid="uid://liam6u5dg0sh" path="res://assets/Spritesheet/tilemap.png" id="2_0i0sp"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ciebf7nt68mck" path="res://scenes/entities/Spike.tscn" id="4_ejw2t"]
 [ext_resource type="Script" path="res://scenes/entities/spike.gd" id="5_4bvco"]
 [ext_resource type="PackedScene" uid="uid://dv83t773uhgn2" path="res://scenes/entities/Enemy.tscn" id="6_67vai"]
+[ext_resource type="PackedScene" uid="uid://v53bn0mybp0y" path="res://scenes/entities/Coin.tscn" id="7_nqyvv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bliii"]
 texture = ExtResource("2_0i0sp")
@@ -353,3 +354,9 @@ script = ExtResource("5_4bvco")
 position = Vector2(187, 158)
 
 [node name="collectibles_coin" type="Node" parent="."]
+
+[node name="Coin" parent="collectibles_coin" instance=ExtResource("7_nqyvv")]
+position = Vector2(36, 11)
+
+[node name="Coin2" parent="collectibles_coin" instance=ExtResource("7_nqyvv")]
+position = Vector2(468, 11)

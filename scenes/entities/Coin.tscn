@@ -1,14 +1,30 @@
-[gd_scene load_steps=8 format=3 uid="uid://v53bn0mybp0y"]
+[gd_scene load_steps=12 format=3 uid="uid://v53bn0mybp0y"]
 
 [ext_resource type="Script" path="res://scenes/entities/coin.gd" id="1_qd7hd"]
 [ext_resource type="Texture2D" uid="uid://c152hymfufn13" path="res://assets/PNG/collectibles_coin_gold_1.png" id="2_0nxpa"]
+[ext_resource type="Texture2D" uid="uid://swkm60l3brd3" path="res://assets/PNG/vfx_effect_coin_1.png" id="2_byfnk"]
+[ext_resource type="Texture2D" uid="uid://c1gc4kih2npa1" path="res://assets/PNG/vfx_effect_coin_2.png" id="3_8t8gw"]
 [ext_resource type="Texture2D" uid="uid://mkwghnnwxl5t" path="res://assets/PNG/collectibles_coin_gold_2.png" id="3_ryxpn"]
 [ext_resource type="Texture2D" uid="uid://67qwniyxgkgx" path="res://assets/PNG/collectibles_coin_gold_3.png" id="4_8uyhq"]
+[ext_resource type="Texture2D" uid="uid://t4adredctgyp" path="res://assets/PNG/vfx_effect_coin_3.png" id="4_q78th"]
+[ext_resource type="Texture2D" uid="uid://bg63qjj7ho5fy" path="res://assets/PNG/vfx_effect_coin_4.png" id="5_rs2pm"]
 [ext_resource type="Texture2D" uid="uid://dopwm0l7y4ypj" path="res://assets/PNG/collectibles_coin_gold_4.png" id="5_y6f3r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o0f6j"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_byfnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8t8gw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q78th")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rs2pm")
+}],
 "loop": false,
 "name": &"off",
 "speed": 5.0
@@ -35,6 +51,7 @@ animations = [{
 size = Vector2(27, 26)
 
 [node name="Coin" type="Area2D"]
+position = Vector2(57, 53)
 collision_layer = 8
 monitorable = false
 script = ExtResource("1_qd7hd")
