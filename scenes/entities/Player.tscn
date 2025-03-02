@@ -17,22 +17,16 @@
 [ext_resource type="Texture2D" uid="uid://1py7xbg1b108" path="res://assets/PNG/character_berie_jump_4.png" id="15_hi4as"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f77ga"]
-load_path = "res://.godot/imported/character_berie_run_1.png-6e27a43559f257622012cd877456d966.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7yc1e"]
-load_path = "res://.godot/imported/character_berie_run_2.png-9b4784705b929845b7c0608acedd091d.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sq74c"]
-load_path = "res://.godot/imported/character_berie_run_3.png-77150b8b4f471d7c96b4807c29c04d48.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a87qh"]
-load_path = "res://.godot/imported/character_berie_run_4.png-e4476d24a726679d8bb319d87cbf17a5.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hneax"]
-load_path = "res://.godot/imported/character_berie_run_5.png-8314569cae44678a7910be7390406dff.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wm1eg"]
-load_path = "res://.godot/imported/character_berie_run_6.png-e49547cafd2b5034fa22b9ea211ee39a.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4msg4"]
 animations = [{

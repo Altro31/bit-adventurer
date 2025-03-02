@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://liam6u5dg0sh" path="res://assets/Spritesheet/tilemap.png" id="5_448iv"]
 [ext_resource type="PackedScene" uid="uid://ciebf7nt68mck" path="res://scenes/entities/Spike.tscn" id="7_prm30"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bp08p"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tcb2y"]
 texture = ExtResource("5_448iv")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -288,7 +288,7 @@ texture = ExtResource("5_448iv")
 [sub_resource type="TileSet" id="TileSet_1rlqu"]
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 3
-sources/0 = SubResource("TileSetAtlasSource_bp08p")
+sources/0 = SubResource("TileSetAtlasSource_tcb2y")
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_awc2m")
