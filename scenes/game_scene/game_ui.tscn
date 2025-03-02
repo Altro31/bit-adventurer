@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://bde0cbmryrv5s"]
+[gd_scene load_steps=7 format=3 uid="uid://bde0cbmryrv5s"]
 
 [ext_resource type="Script" path="res://scenes/game_scene/game_ui.gd" id="2_dvsvq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hck5n"]
 font_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_ri5h3"]
+font_size = 26
 
 [sub_resource type="LabelSettings" id="LabelSettings_lgey8"]
 font_size = 31
@@ -40,11 +43,12 @@ color = Color(0.526652, 0.109595, 0.110454, 0.976471)
 
 [node name="Label" type="Label" parent="GameOver"]
 layout_mode = 0
-offset_left = 120.0
-offset_top = 75.0
-offset_right = 207.0
-offset_bottom = 98.0
-text = "Game Over"
+offset_left = 105.0
+offset_top = 58.0
+offset_right = 209.0
+offset_bottom = 94.0
+text = "Perdiste"
+label_settings = SubResource("LabelSettings_ri5h3")
 
 [node name="Restart" type="Button" parent="GameOver"]
 layout_mode = 0
@@ -52,7 +56,7 @@ offset_left = 60.0
 offset_top = 123.0
 offset_right = 145.0
 offset_bottom = 154.0
-text = "Restart
+text = "Volver
 "
 
 [node name="Exit" type="Button" parent="GameOver"]
@@ -61,7 +65,7 @@ offset_left = 176.0
 offset_top = 122.0
 offset_right = 261.0
 offset_bottom = 153.0
-text = "Exit"
+text = "Salir"
 
 [node name="Win" type="ColorRect" parent="."]
 visible = false
