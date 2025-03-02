@@ -1,11 +1,11 @@
 extends CanvasLayer
 
-@export var level: int = 1
+@export var level: String = "1"
 @export var next_level: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Level.text = "nivel "+str(level)
+	$Level.text = "nivel "+level
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_text_clear_carets_and_selection"):

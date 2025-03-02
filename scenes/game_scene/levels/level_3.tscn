@@ -333,7 +333,7 @@ position = Vector2(160, 88)
 player = NodePath("../Node2D/TileMap2/Player")
 
 [node name="GUI" parent="." instance=ExtResource("5_mbxme")]
-level = 3
+level = "3"
 next_level = "res://scenes/game_scene/levels/level_3.tscn"
 
 [node name="Goal" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("6_pf6bb")]
