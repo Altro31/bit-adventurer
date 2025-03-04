@@ -3,9 +3,13 @@ extends CanvasLayer
 @export var level: String = "1"
 @export var next_level: String
 
+var score: int
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Level.text = "nivel "+level
+	score = GLOBAL.score
+	
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_text_clear_carets_and_selection"):
@@ -22,12 +26,14 @@ func game_over():
 	tween.tween_property($GameOver,"modulate",Color(1,1,1,0.8),1.0)
 
 func win():
+	$Win/Score.text = "puntuación: "+str(GLOBAL.score)
 	get_tree().paused = true
 	$Win.visible = true
 	var tween: Tween = create_tween().set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
 	tween.tween_property($Win,"modulate",Color(1,1,1,0.8),1.0)
 
 func _on_restart():
+	GLOBAL.score = score
 	get_tree().reload_current_scene()
 
 func _on_exit():

@@ -69,7 +69,7 @@ text = "Salir"
 
 [node name="Win" type="ColorRect" parent="."]
 visible = false
-modulate = Color(1, 1, 1, 0.00784314)
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -79,10 +79,10 @@ color = Color(0.0843947, 0.342769, 0.220552, 0.976471)
 
 [node name="Label" type="Label" parent="Win"]
 layout_mode = 0
-offset_left = 89.0
-offset_top = 44.0
-offset_right = 246.0
-offset_bottom = 88.0
+offset_left = 88.0
+offset_top = 26.0
+offset_right = 245.0
+offset_bottom = 70.0
 text = "Ganaste!!!"
 label_settings = SubResource("LabelSettings_lgey8")
 autowrap_mode = 1
@@ -103,6 +103,14 @@ offset_top = 123.0
 offset_right = 154.0
 offset_bottom = 154.0
 text = "Menú"
+
+[node name="Score" type="Label" parent="Win"]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 80.0
+offset_right = 241.0
+offset_bottom = 103.0
+text = "puntuación: <score>"
 
 [node name="PauseUI" type="ColorRect" parent="."]
 visible = false
