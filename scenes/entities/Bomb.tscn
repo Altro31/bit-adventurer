@@ -1,0 +1,120 @@
+[gd_scene load_steps=21 format=3 uid="uid://dn6m3p54cdjmp"]
+
+[ext_resource type="Script" path="res://scenes/entities/bomb.gd" id="1_q21df"]
+[ext_resource type="Texture2D" uid="uid://gn8th2xduuif" path="res://assets/PNG/trap_bomb_alert1_1.png" id="2_72td2"]
+[ext_resource type="Texture2D" uid="uid://dfixhcf83p4i6" path="res://assets/PNG/trap_bomb_alert1_2.png" id="3_woowg"]
+[ext_resource type="Texture2D" uid="uid://dgatswyuf45d2" path="res://assets/PNG/trap_bomb_alert2_1.png" id="4_ksgq5"]
+[ext_resource type="Texture2D" uid="uid://dpn0yc05bvosn" path="res://assets/PNG/trap_bomb_alert2_2.png" id="5_jeb6a"]
+[ext_resource type="Texture2D" uid="uid://bgfgc8jxcjruc" path="res://assets/PNG/trap_bomb_alert3_1.png" id="6_i5vjv"]
+[ext_resource type="Texture2D" uid="uid://cbmdief8s7quc" path="res://assets/PNG/trap_bomb_alert3_2.png" id="7_0hsd6"]
+[ext_resource type="Texture2D" uid="uid://dvwc2no8c8ryo" path="res://assets/PNG/trap_bomb_explosion_1.png" id="8_h4k0q"]
+[ext_resource type="Texture2D" uid="uid://dt1065iyiumry" path="res://assets/PNG/trap_bomb_explosion_2.png" id="9_ue1mt"]
+[ext_resource type="Texture2D" uid="uid://rddkqk657has" path="res://assets/PNG/trap_bomb_explosion_3.png" id="10_yaubt"]
+[ext_resource type="Texture2D" uid="uid://b2qf1tlmjca3t" path="res://assets/PNG/trap_bomb_explosion_4.png" id="11_2vlbr"]
+[ext_resource type="Texture2D" uid="uid://ewixq0w663pd" path="res://assets/PNG/trap_bomb_explosion_5.png" id="12_um8ek"]
+[ext_resource type="Texture2D" uid="uid://c6ngy1ehxn77i" path="res://assets/PNG/trap_bomb_explosion_6.png" id="13_j1p6q"]
+[ext_resource type="Texture2D" uid="uid://ci3wi32tfo8pe" path="res://assets/PNG/trap_bomb_explosion_7.png" id="14_jqsww"]
+[ext_resource type="Texture2D" uid="uid://1m3j78o1cqvv" path="res://assets/PNG/trap_bomb_explosion_8.png" id="15_cjl2o"]
+[ext_resource type="Texture2D" uid="uid://bhu76isrrjmnc" path="res://assets/PNG/trap_bomb_explosion_9.png" id="16_tjbib"]
+[ext_resource type="Texture2D" uid="uid://cefn8mc06mjmb" path="res://assets/PNG/trap_bomb_idle.png" id="17_ftrye"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d54o7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_72td2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_woowg")
+}],
+"loop": true,
+"name": &"trap_bomb_alert1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ksgq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jeb6a")
+}],
+"loop": true,
+"name": &"trap_bomb_alert2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_i5vjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0hsd6")
+}],
+"loop": true,
+"name": &"trap_bomb_alert3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_h4k0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ue1mt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yaubt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2vlbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_um8ek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_j1p6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jqsww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_cjl2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_tjbib")
+}],
+"loop": false,
+"name": &"trap_bomb_explosion",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_ftrye")
+}],
+"loop": false,
+"name": &"trap_bomb_idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p88ab"]
+radius = 39.6232
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d27p4"]
+size = Vector2(127.21, 84.8372)
+
+[node name="Bomb" type="Area2D"]
+script = ExtResource("1_q21df")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.26563, 1.34375)
+sprite_frames = SubResource("SpriteFrames_d54o7")
+animation = &"trap_bomb_idle"
+autoplay = "trap_bomb_idle"
+
+[node name="Explosion" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_p88ab")
+disabled = true
+
+[node name="Activation" type="CollisionShape2D" parent="."]
+position = Vector2(-0.499998, 4)
+scale = Vector2(1.26563, 1.34375)
+shape = SubResource("RectangleShape2D_d27p4")
