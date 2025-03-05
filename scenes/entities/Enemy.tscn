@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://dv83t773uhgn2"]
 
-[ext_resource type="Script" path="res://scenes/entities/enemy.gd" id="1_pq6es"]
+[ext_resource type="Script" uid="uid://cxrxka7o5ugng" path="res://scenes/entities/enemy.gd" id="1_pq6es"]
 [ext_resource type="Texture2D" uid="uid://c84vgs3hi7wt6" path="res://assets/PNG/character_enemy_sandbug_death_1.png" id="2_3smvb"]
 [ext_resource type="Texture2D" uid="uid://k1w25vop3ti8" path="res://assets/PNG/character_enemy_sandbug_death_2.png" id="3_8hk7h"]
 [ext_resource type="Texture2D" uid="uid://cgxw1uxp0iuwj" path="res://assets/PNG/character_enemy_sandbug_death_3.png" id="4_05vwo"]

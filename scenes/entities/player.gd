@@ -6,8 +6,8 @@ var death: bool = false
 
 @export var gui: CanvasLayer
 
-@export var speed: int = 128
-@export var gravity: int = 36
+@export var speed: int = 148
+@export var gravity: int = 30
 @export var jump: int = 368
 
 

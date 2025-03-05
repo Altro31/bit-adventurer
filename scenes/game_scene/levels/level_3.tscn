@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=4 uid="uid://bqyposrpfon15"]
 
-[ext_resource type="Script" path="res://scenes/game_scene/levels/level.gd" id="1_65ilt"]
+[ext_resource type="Script" uid="uid://3bd6350v3ux5" path="res://scenes/game_scene/levels/level.gd" id="1_65ilt"]
 [ext_resource type="Texture2D" uid="uid://liam6u5dg0sh" path="res://assets/Spritesheet/tilemap.png" id="2_v6481"]
 [ext_resource type="PackedScene" uid="uid://b6xxovxgrmn5l" path="res://scenes/entities/Player.tscn" id="3_xl55w"]
 [ext_resource type="PackedScene" uid="uid://cevttteursd20" path="res://scenes/entities/Camera.tscn" id="4_6188b"]
@@ -325,7 +325,6 @@ tile_set = SubResource("TileSet_6ahys")
 [node name="Player" parent="Node2D/TileMap2" node_paths=PackedStringArray("gui") instance=ExtResource("3_xl55w")]
 position = Vector2(40, 139)
 gui = NodePath("../../../GUI")
-gravity = 30
 jump = 500
 
 [node name="Camera" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_6188b")]

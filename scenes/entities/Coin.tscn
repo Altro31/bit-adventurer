@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://v53bn0mybp0y"]
 
-[ext_resource type="Script" path="res://scenes/entities/coin.gd" id="1_qd7hd"]
+[ext_resource type="Script" uid="uid://fb8jn5m1ajpw" path="res://scenes/entities/coin.gd" id="1_qd7hd"]
 [ext_resource type="Texture2D" uid="uid://c152hymfufn13" path="res://assets/PNG/collectibles_coin_gold_1.png" id="2_0nxpa"]
 [ext_resource type="Texture2D" uid="uid://swkm60l3brd3" path="res://assets/PNG/vfx_effect_coin_1.png" id="2_byfnk"]
 [ext_resource type="Texture2D" uid="uid://c1gc4kih2npa1" path="res://assets/PNG/vfx_effect_coin_2.png" id="3_8t8gw"]
@@ -51,7 +51,6 @@ animations = [{
 size = Vector2(27, 26)
 
 [node name="Coin" type="Area2D"]
-position = Vector2(0, -1)
 collision_layer = 8
 script = ExtResource("1_qd7hd")
 
