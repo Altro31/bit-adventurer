@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=4 uid="uid://ceq1oervk3kqu"]
 
-[ext_resource type="Script" uid="uid://3bd6350v3ux5" path="res://scenes/game_scene/levels/level.gd" id="1_awc2m"]
+[ext_resource type="Script" path="res://scenes/game_scene/levels/level.gd" id="1_awc2m"]
 [ext_resource type="PackedScene" uid="uid://bde0cbmryrv5s" path="res://scenes/game_scene/game_ui.tscn" id="2_25nwi"]
 [ext_resource type="PackedScene" uid="uid://cevttteursd20" path="res://scenes/entities/Camera.tscn" id="3_ku07s"]
 [ext_resource type="PackedScene" uid="uid://b6xxovxgrmn5l" path="res://scenes/entities/Player.tscn" id="4_c1orr"]
@@ -293,7 +293,7 @@ physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_bliii")
 
-[node name="Level2" type="Node2D"]
+[node name="Level1" type="Node2D"]
 script = ExtResource("1_awc2m")
 
 [node name="BackgroundColor" type="ColorRect" parent="."]
