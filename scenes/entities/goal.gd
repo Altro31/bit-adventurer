@@ -1,8 +1,8 @@
 extends Area2D
 
-@export var gui: CanvasLayer
+@export var gui: GUI
 
 func body_entered(body):
 	if body is Player:
-		gui.win()
+		body.win()
 		

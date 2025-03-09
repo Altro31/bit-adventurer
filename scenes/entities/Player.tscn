@@ -1,6 +1,6 @@
-[gd_scene load_steps=25 format=3 uid="uid://b6xxovxgrmn5l"]
+[gd_scene load_steps=32 format=3 uid="uid://b6xxovxgrmn5l"]
 
-[ext_resource type="Script" path="res://scenes/entities/player.gd" id="1_ewah0"]
+[ext_resource type="Script" uid="uid://djhwx7v6hlcww" path="res://scenes/entities/player.gd" id="1_ewah0"]
 [ext_resource type="Texture2D" uid="uid://css0go1ke13xu" path="res://assets/PNG/character_berie_death_1.png" id="2_yuxxj"]
 [ext_resource type="Texture2D" uid="uid://dnsav1eabrltd" path="res://assets/PNG/character_berie_death_2.png" id="3_knrl1"]
 [ext_resource type="Texture2D" uid="uid://nrbtdfertc5" path="res://assets/PNG/character_berie_death_3.png" id="4_nv2vl"]
@@ -21,6 +21,13 @@
 [ext_resource type="Texture2D" uid="uid://bvm65b37dadgg" path="res://assets/PNG/character_berie_run_4.png" id="19_lrmld"]
 [ext_resource type="Texture2D" uid="uid://yihsnqnbyxof" path="res://assets/PNG/character_berie_run_5.png" id="20_vukd2"]
 [ext_resource type="Texture2D" uid="uid://b1rsy4ic1havq" path="res://assets/PNG/character_berie_run_6.png" id="21_vom8r"]
+[ext_resource type="Texture2D" uid="uid://ct1biprgp07in" path="res://assets/PNG/character_berie_showoff_1.png" id="22_flmdu"]
+[ext_resource type="Texture2D" uid="uid://ctjik6ogdagrs" path="res://assets/PNG/character_berie_showoff_2.png" id="23_n8b1g"]
+[ext_resource type="Texture2D" uid="uid://bd6hntvvevb6t" path="res://assets/PNG/character_berie_showoff_3.png" id="24_ud5pm"]
+[ext_resource type="Texture2D" uid="uid://xt6gkse1fj7r" path="res://assets/PNG/character_berie_showoff_4.png" id="25_0v6ls"]
+[ext_resource type="Texture2D" uid="uid://d3g5iik7oj4hy" path="res://assets/PNG/character_berie_showoff_5.png" id="26_u5uhg"]
+[ext_resource type="Texture2D" uid="uid://tl0sl3fouphg" path="res://assets/PNG/character_berie_showoff_6.png" id="27_75o84"]
+[ext_resource type="Texture2D" uid="uid://olslh7ikmm7l" path="res://assets/PNG/character_berie_showoff_7.png" id="28_c8v0e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4msg4"]
 animations = [{
@@ -108,6 +115,32 @@ animations = [{
 "loop": true,
 "name": &"run",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_flmdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_n8b1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ud5pm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_0v6ls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_u5uhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_75o84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_c8v0e")
+}],
+"loop": false,
+"name": &"win",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_at4ny"]
@@ -126,7 +159,7 @@ script = ExtResource("1_ewah0")
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -9)
 sprite_frames = SubResource("SpriteFrames_4msg4")
-animation = &"run"
+animation = &"win"
 autoplay = "idle"
 
 [node name="Collision" type="CollisionShape2D" parent="."]
@@ -140,6 +173,6 @@ collision_mask = 2
 position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_mkn02")
 
-[connection signal="animation_finished" from="Sprite" to="." method="_on_finished"]
+[connection signal="property_list_changed" from="." to="." method="_on_property_list_changed"]
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
 [connection signal="body_entered" from="HitPoint" to="." method="_on_hit_body_entered"]

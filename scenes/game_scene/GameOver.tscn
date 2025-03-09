@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx4js885ycdt"]
+
+[ext_resource type="Script" uid="uid://dp4b3j2prypob" path="res://scenes/game_scene/states_scenes.gd" id="1_hhgg7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_p2bs1"]
+font_size = 26
+
+[node name="GameOver" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.526652, 0.109595, 0.110454, 0.976471)
+script = ExtResource("1_hhgg7")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 58.0
+offset_right = 209.0
+offset_bottom = 94.0
+text = "Perdiste"
+label_settings = SubResource("LabelSettings_p2bs1")
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 123.0
+offset_right = 145.0
+offset_bottom = 154.0
+text = "Repetir"
+
+[node name="Menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 122.0
+offset_right = 261.0
+offset_bottom = 153.0
+text = "Menú"
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu"]

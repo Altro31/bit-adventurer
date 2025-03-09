@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct07ruhi06auo"]
+
+[ext_resource type="Script" uid="uid://dp4b3j2prypob" path="res://scenes/game_scene/states_scenes.gd" id="1_j1imb"]
+
+[node name="Pause" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.027451, 0.0196078, 0.0196078, 0.537255)
+script = ExtResource("1_j1imb")
+
+[node name="Actions" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 42.0
+offset_right = 203.0
+offset_bottom = 143.0
+
+[node name="Resume" type="Button" parent="Actions"]
+layout_mode = 2
+text = "Continuar
+"
+
+[node name="Restart" type="Button" parent="Actions"]
+layout_mode = 2
+text = "Reiniciar"
+
+[node name="Menu" type="Button" parent="Actions"]
+layout_mode = 2
+text = "Menú"
+
+[connection signal="pressed" from="Actions/Resume" to="." method="_on_resume"]
+[connection signal="pressed" from="Actions/Restart" to="." method="_on_restart"]
+[connection signal="pressed" from="Actions/Menu" to="." method="_on_menu"]

@@ -9,8 +9,8 @@ class_name Enemy
 
 @export var dir = 1
 
-func _process(delta):
-	if health > 0:
+func _process(_delta):
+	if health > 0 and $Sprite.animation=="walk":
 		motion_control()
 
 func motion_control():
@@ -27,16 +27,29 @@ func damage_control(damage: int):
 	health -= damage
 	
 	if health <= 0:
-		$Sprite.set_animation("death")
+		$Sprite.play("death")
 		$Collision.set_deferred("disabled",true)
 		$Sprite/AreaHit/Collision.set_deferred("disabled",true)
 		gravity = 0
 		GLOBAL.score+=score
 		
 func _on_sprite_animation_finished():
-	if $Sprite.animation == "death":
-		queue_free()
+	match $Sprite.animation:
+		"death":
+			queue_free()
+		"spawn":
+			$Sprite.play("walk")
 		
 func _on_area_hit_body_entered(body):
 	if body is Player:
 		body.damage_control()
+
+
+func _on_visibility_changed() -> void:
+	print("Visible")
+
+
+func _on_player_detected(body: Node2D) -> void:
+	if body is Player and $Sprite.animation == "spaw_idle":
+		$Detection/Collision.disabled = true
+		$Sprite.play("spawn")

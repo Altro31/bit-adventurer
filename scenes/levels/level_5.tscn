@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=4 uid="uid://cd2b5f54ttef2"]
 
-[ext_resource type="Script" path="res://scenes/game_scene/levels/level.gd" id="1_t54nl"]
+[ext_resource type="Script" uid="uid://3bd6350v3ux5" path="res://scenes/levels/level.gd" id="1_t54nl"]
 [ext_resource type="Texture2D" uid="uid://liam6u5dg0sh" path="res://assets/Spritesheet/tilemap.png" id="2_cjkf7"]
 [ext_resource type="PackedScene" uid="uid://b6xxovxgrmn5l" path="res://scenes/entities/Player.tscn" id="3_kl0yr"]
 [ext_resource type="PackedScene" uid="uid://cevttteursd20" path="res://scenes/entities/Camera.tscn" id="4_cx7m4"]
@@ -333,7 +333,7 @@ player = NodePath("../Node2D/TileMap2/Player")
 
 [node name="GUI" parent="." instance=ExtResource("5_dqeu4")]
 level = "5"
-next_level = "res://scenes/game_scene/levels/level_3.tscn"
+next_level = "res://scenes/credits/credits.tscn"
 
 [node name="Goal" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("6_ikkdo")]
 position = Vector2(1068, -16)

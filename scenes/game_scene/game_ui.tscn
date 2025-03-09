@@ -1,17 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://bde0cbmryrv5s"]
+[gd_scene load_steps=8 format=3 uid="uid://bde0cbmryrv5s"]
 
-[ext_resource type="Script" path="res://scenes/game_scene/game_ui.gd" id="2_dvsvq"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_hck5n"]
-font_size = 10
-
-[sub_resource type="LabelSettings" id="LabelSettings_ri5h3"]
-font_size = 26
-
-[sub_resource type="LabelSettings" id="LabelSettings_lgey8"]
-font_size = 31
+[ext_resource type="PackedScene" uid="uid://bx4js885ycdt" path="res://scenes/game_scene/GameOver.tscn" id="2_dnslt"]
+[ext_resource type="Script" uid="uid://ic3ix7aksr3t" path="res://scenes/game_scene/game_ui.gd" id="2_dvsvq"]
+[ext_resource type="PackedScene" uid="uid://bm5s5afhhinh8" path="res://scenes/game_scene/Win.tscn" id="3_v20na"]
+[ext_resource type="PackedScene" uid="uid://ct07ruhi06auo" path="res://scenes/game_scene/Pause.tscn" id="4_y85d6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n6rwg"]
+font_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_hck5n"]
 font_size = 10
 
 [sub_resource type="Theme" id="Theme_o7nrm"]
@@ -22,155 +19,54 @@ process_mode = 3
 script = ExtResource("2_dvsvq")
 
 [node name="Container" type="MarginContainer" parent="."]
-offset_right = 319.0
-offset_bottom = 23.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 315.0
+offset_bottom = 28.0
 
-[node name="Score" type="Label" parent="Container"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Container"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Level" type="Label" parent="Container/HBoxContainer"]
+layout_mode = 2
+text = "nivel: <level>"
+label_settings = SubResource("LabelSettings_n6rwg")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Container"]
+layout_mode = 2
+alignment = 1
+
+[node name="Score" type="Label" parent="Container/HBoxContainer2"]
 layout_mode = 2
 text = "score: 0000"
 label_settings = SubResource("LabelSettings_hck5n")
 horizontal_alignment = 1
 
-[node name="GameOver" type="ColorRect" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.526652, 0.109595, 0.110454, 0.976471)
-
-[node name="Label" type="Label" parent="GameOver"]
-layout_mode = 0
-offset_left = 105.0
-offset_top = 58.0
-offset_right = 209.0
-offset_bottom = 94.0
-text = "Perdiste"
-label_settings = SubResource("LabelSettings_ri5h3")
-
-[node name="Restart" type="Button" parent="GameOver"]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 123.0
-offset_right = 145.0
-offset_bottom = 154.0
-text = "Repetir"
-
-[node name="Menu" type="Button" parent="GameOver"]
-layout_mode = 0
-offset_left = 176.0
-offset_top = 122.0
-offset_right = 261.0
-offset_bottom = 153.0
-text = "Menú"
-
-[node name="Win" type="ColorRect" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.0843947, 0.342769, 0.220552, 0.976471)
-
-[node name="Label" type="Label" parent="Win"]
-layout_mode = 0
-offset_left = 88.0
-offset_top = 26.0
-offset_right = 245.0
-offset_bottom = 70.0
-text = "Ganaste!!!"
-label_settings = SubResource("LabelSettings_lgey8")
-autowrap_mode = 1
-
-[node name="Next" type="Button" parent="Win"]
-layout_mode = 0
-offset_left = 177.0
-offset_top = 123.0
-offset_right = 262.0
-offset_bottom = 154.0
-text = "Siguiente
-"
-
-[node name="Menu" type="Button" parent="Win"]
-layout_mode = 0
-offset_left = 69.0
-offset_top = 123.0
-offset_right = 154.0
-offset_bottom = 154.0
-text = "Menú"
-
-[node name="Score" type="Label" parent="Win"]
-layout_mode = 0
-offset_left = 84.0
-offset_top = 80.0
-offset_right = 241.0
-offset_bottom = 103.0
-text = "puntuación: <score>"
-
-[node name="PauseUI" type="ColorRect" parent="."]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.027451, 0.0196078, 0.0196078, 0.537255)
-
-[node name="Label" type="Label" parent="PauseUI"]
-layout_mode = 0
-offset_left = 129.0
-offset_top = 24.0
-offset_right = 186.0
-offset_bottom = 53.0
-text = "Pausa"
-label_settings = SubResource("LabelSettings_lgey8")
-autowrap_mode = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PauseUI"]
-layout_mode = 0
-offset_left = 115.0
-offset_top = 63.0
-offset_right = 201.0
-offset_bottom = 164.0
-
-[node name="Resume" type="Button" parent="PauseUI/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="Container"]
 layout_mode = 2
-text = "Continuar
-"
+size_flags_horizontal = 8
+size_flags_vertical = 4
+alignment = 2
 
-[node name="Restart" type="Button" parent="PauseUI/VBoxContainer"]
+[node name="PauseButton" type="Button" parent="Container/HBoxContainer3"]
 layout_mode = 2
-text = "Reiniciar"
-
-[node name="Menu" type="Button" parent="PauseUI/VBoxContainer"]
-layout_mode = 2
-text = "Menú"
-
-[node name="Level" type="Label" parent="."]
-offset_left = 8.0
-offset_top = 4.0
-offset_right = 71.0
-offset_bottom = 27.0
-text = "nivel: <level>"
-label_settings = SubResource("LabelSettings_n6rwg")
-
-[node name="Pause" type="Button" parent="."]
-offset_left = 300.0
-offset_top = 5.0
-offset_right = 317.0
-offset_bottom = 25.0
+focus_mode = 0
 theme = SubResource("Theme_o7nrm")
 text = "||"
 
-[connection signal="pressed" from="GameOver/Restart" to="." method="_on_restart"]
-[connection signal="pressed" from="GameOver/Menu" to="." method="_on_menu"]
-[connection signal="pressed" from="Win/Next" to="." method="_on_next"]
-[connection signal="pressed" from="Win/Menu" to="." method="_on_menu"]
-[connection signal="pressed" from="PauseUI/VBoxContainer/Resume" to="." method="_on_resume"]
-[connection signal="pressed" from="PauseUI/VBoxContainer/Restart" to="." method="_on_restart"]
-[connection signal="pressed" from="PauseUI/VBoxContainer/Menu" to="." method="_on_menu"]
-[connection signal="pressed" from="Pause" to="." method="_on_pause"]
+[node name="GameOver" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("2_dnslt")]
+visible = false
+modulate = Color(1, 1, 1, 0)
+gui = NodePath("..")
+
+[node name="Win" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("3_v20na")]
+visible = false
+modulate = Color(1, 1, 1, 0)
+gui = NodePath("..")
+
+[node name="Pause" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("4_y85d6")]
+visible = false
+gui = NodePath("..")
+
+[connection signal="pressed" from="Container/HBoxContainer3/PauseButton" to="." method="_on_pause"]

@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm5s5afhhinh8"]
+
+[ext_resource type="Script" uid="uid://dp4b3j2prypob" path="res://scenes/game_scene/states_scenes.gd" id="1_b0cao"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dhqas"]
+font_size = 31
+
+[node name="Win" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0843947, 0.342769, 0.220552, 0.976471)
+script = ExtResource("1_b0cao")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 26.0
+offset_right = 245.0
+offset_bottom = 70.0
+text = "Ganaste!!!"
+label_settings = SubResource("LabelSettings_dhqas")
+autowrap_mode = 1
+
+[node name="Next" type="Button" parent="."]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 123.0
+offset_right = 262.0
+offset_bottom = 154.0
+text = "Siguiente
+"
+
+[node name="Menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 123.0
+offset_right = 154.0
+offset_bottom = 154.0
+text = "Menú"
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 80.0
+offset_right = 241.0
+offset_bottom = 103.0
+text = "puntuación: <score>"
+
+[connection signal="pressed" from="Next" to="." method="_on_next"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu"]

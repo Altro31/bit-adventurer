@@ -1,15 +1,20 @@
-[gd_scene load_steps=25 format=3 uid="uid://dv83t773uhgn2"]
+[gd_scene load_steps=31 format=3 uid="uid://dv83t773uhgn2"]
 
 [ext_resource type="Script" uid="uid://cxrxka7o5ugng" path="res://scenes/entities/enemy.gd" id="1_pq6es"]
 [ext_resource type="Texture2D" uid="uid://c84vgs3hi7wt6" path="res://assets/PNG/character_enemy_sandbug_death_1.png" id="2_3smvb"]
 [ext_resource type="Texture2D" uid="uid://k1w25vop3ti8" path="res://assets/PNG/character_enemy_sandbug_death_2.png" id="3_8hk7h"]
 [ext_resource type="Texture2D" uid="uid://cgxw1uxp0iuwj" path="res://assets/PNG/character_enemy_sandbug_death_3.png" id="4_05vwo"]
 [ext_resource type="Texture2D" uid="uid://btijxxynnyc40" path="res://assets/PNG/character_enemy_sandbug_death_4.png" id="5_8t7kh"]
+[ext_resource type="Texture2D" uid="uid://cvybp058ca0na" path="res://assets/PNG/vfx_effect_consume_1.png" id="6_5a6a6"]
 [ext_resource type="Texture2D" uid="uid://bcn7pbva42d6h" path="res://assets/PNG/character_enemy_sandbug_idle_1.png" id="6_6q6oc"]
 [ext_resource type="Texture2D" uid="uid://cdplev2b2cjp2" path="res://assets/PNG/character_enemy_sandbug_idle_2.png" id="7_2qh46"]
+[ext_resource type="Texture2D" uid="uid://dcfgrqpjptmid" path="res://assets/PNG/vfx_effect_consume_2.png" id="7_3dlf4"]
 [ext_resource type="Texture2D" uid="uid://c5gcnj50fkm3j" path="res://assets/PNG/character_enemy_sandbug_idle_3.png" id="8_1smw8"]
+[ext_resource type="Texture2D" uid="uid://bg2eoxowdhqj1" path="res://assets/PNG/vfx_effect_consume_3.png" id="8_mqtq1"]
+[ext_resource type="Texture2D" uid="uid://dyb0rvkchm5v3" path="res://assets/PNG/vfx_effect_consume_4.png" id="9_qywvf"]
 [ext_resource type="Texture2D" uid="uid://cwdgubpxhflqp" path="res://assets/PNG/character_enemy_sandbug_idle_4.png" id="9_xgqlk"]
 [ext_resource type="Texture2D" uid="uid://b5vp7q7pu6em1" path="res://assets/PNG/character_enemy_sandbug_spawn_1.png" id="10_2p1qi"]
+[ext_resource type="Texture2D" uid="uid://ckalov5vdysl0" path="res://assets/PNG/vfx_effect_consume_5.png" id="10_hr3fk"]
 [ext_resource type="Texture2D" uid="uid://dfag7slg6oodi" path="res://assets/PNG/character_enemy_sandbug_spawn_2.png" id="11_40pxb"]
 [ext_resource type="Texture2D" uid="uid://k804pj3xl8sx" path="res://assets/PNG/character_enemy_sandbug_spawn_3.png" id="12_fim3v"]
 [ext_resource type="Texture2D" uid="uid://cvqn3vfob7i66" path="res://assets/PNG/character_enemy_sandbug_spawn_4.png" id="13_fy6eb"]
@@ -36,6 +41,21 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_8t7kh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5a6a6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3dlf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mqtq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qywvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hr3fk")
 }],
 "loop": false,
 "name": &"death",
@@ -62,6 +82,14 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("10_2p1qi")
 }, {
+"duration": 1.0,
+"texture": ExtResource("10_2p1qi")
+}],
+"loop": true,
+"name": &"spaw_idle",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("11_40pxb")
 }, {
@@ -111,6 +139,9 @@ size = Vector2(19.4063, 4.375)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ob3xy"]
 size = Vector2(12.25, 8)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2r8oc"]
+size = Vector2(432, 167)
+
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 5
@@ -122,7 +153,7 @@ script = ExtResource("1_pq6es")
 position = Vector2(0, -24)
 sprite_frames = SubResource("SpriteFrames_uxfht")
 animation = &"death"
-autoplay = "walk"
+autoplay = "spaw_idle"
 
 [node name="RayGround" type="RayCast2D" parent="Sprite"]
 position = Vector2(9, 24)
@@ -130,6 +161,7 @@ target_position = Vector2(0, 10)
 collision_mask = 4
 
 [node name="AreaHit" type="Area2D" parent="Sprite"]
+monitorable = false
 
 [node name="Collision" type="CollisionShape2D" parent="Sprite/AreaHit"]
 position = Vector2(0.296875, 18.8125)
@@ -139,5 +171,14 @@ shape = SubResource("RectangleShape2D_bnjya")
 position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_ob3xy")
 
+[node name="Detection" type="Area2D" parent="."]
+monitorable = false
+
+[node name="Collision" type="CollisionShape2D" parent="Detection"]
+visible = false
+position = Vector2(1, -83.5)
+shape = SubResource("RectangleShape2D_2r8oc")
+
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
 [connection signal="body_entered" from="Sprite/AreaHit" to="." method="_on_area_hit_body_entered"]
+[connection signal="body_entered" from="Detection" to="." method="_on_player_detected"]

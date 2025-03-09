@@ -10,7 +10,7 @@ func _on_player_detected(body):
 	if not onTime and body is Player:
 		onTime =true
 		player = body
-		$Sprite.set_animation("alert")
+		$Sprite.play("alert")
 		
 func _on_alert_end():
 	if $Sprite.animation == "explode":
@@ -20,7 +20,7 @@ func _on_animation_loop():
 	if $Sprite.animation == "alert":
 		time -=1
 		if time <= 0:
-			$Sprite.set_animation("explode")
+			$Sprite.play("explode")
 			if player != null:
 				player.damage_control()
 

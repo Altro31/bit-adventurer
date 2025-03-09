@@ -3,21 +3,36 @@ class_name Player
 
 var axis: Vector2 = Vector2.ZERO
 var death: bool = false
+var won: bool = false
 
-@export var gui: CanvasLayer
+@export var gui: GUI
 
+@export_category("Configs")
 @export var speed: int = 148
 @export var gravity: int = 30
 @export var jump: int = 368
 
+@export_category("Skills")
+@export var doubleJump = true
+
+var disableDoubleJump: bool
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	disableDoubleJump = not doubleJump
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if $Sprite.animation == "win":
+		return
+	
+	if is_on_floor() and won:
+		$Sprite.play("win")
+		return
+		
+	restoreDoubleJump()
 	match death:
 		true:
 			death_control()
@@ -29,8 +44,12 @@ func get_axis()->Vector2:
 	return axis.normalized()
 
 func _input(event: InputEvent):
-	if not death and is_on_floor() and event.is_action_pressed("ui_accept"):
-		jump_control(1)
+	if not death and event.is_action_pressed("ui_accept"):
+		if is_on_floor():
+			jump_control(1)
+		if not is_on_floor() and doubleJump:
+			doubleJump = false
+			jump_control(0.75)
 	
 func death_control():
 	velocity.x = 0
@@ -49,21 +68,21 @@ func motion_control():
 	match is_on_floor():
 		true:
 			if get_axis().x == 0:
-				$Sprite.set_animation("idle")
+				$Sprite.play("idle")
 			else:
-				$Sprite.set_animation("run")
+				$Sprite.play("run")
 		false:
 			if velocity.y < 0:
-				$Sprite.set_animation("jump")
+				$Sprite.play("jump")
 			else:
-				$Sprite.set_animation("fall")
+				$Sprite.play("fall")
 
 func jump_control(power: float):
 	velocity.y = -jump * power
 	
 func damage_control():
 	death = true
-	$Sprite.set_animation("death")
+	$Sprite.play("death")
 
 func _on_hit_body_entered(body):
 	if (body is Enemy and velocity.y >= 0):
@@ -73,4 +92,12 @@ func _on_hit_body_entered(body):
 func _on_sprite_animation_finished():
 	if $Sprite.animation == "death":
 		gui.game_over()
+	if $Sprite.animation == "win":
+		gui.win()
+
+func restoreDoubleJump():
+	if is_on_floor() and not doubleJump and not disableDoubleJump:
+		doubleJump = true
 		
+func win():
+	won = true
