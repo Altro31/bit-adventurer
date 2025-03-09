@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=4 uid="uid://bqyposrpfon15"]
 
 [ext_resource type="Script" uid="uid://3bd6350v3ux5" path="res://scenes/levels/level.gd" id="1_65ilt"]
-[ext_resource type="Texture2D" uid="uid://liam6u5dg0sh" path="res://assets/Spritesheet/tilemap.png" id="2_v6481"]
+[ext_resource type="Texture2D" uid="uid://cc5uo0bvuxhne" path="res://assets/PNG/tilemap.png" id="2_v6481"]
 [ext_resource type="PackedScene" uid="uid://cevttteursd20" path="res://scenes/entities/Camera.tscn" id="4_6188b"]
 [ext_resource type="PackedScene" uid="uid://bde0cbmryrv5s" path="res://scenes/game_scene/game_ui.tscn" id="5_mbxme"]
 [ext_resource type="PackedScene" uid="uid://c4bh7pnxcgtcu" path="res://scenes/entities/Goal.tscn" id="6_pf6bb"]

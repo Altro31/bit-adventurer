@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://nwxge64opt5t"]
 
-[ext_resource type="Script" uid="uid://rovyplajaml8" path="res://scenes/game_scene/credits.gd" id="1_5fe7c"]
+[ext_resource type="Script" uid="uid://bi2xv8kqeej4k" path="res://scenes/credits/credits.gd" id="1_8vc4u"]
 [ext_resource type="PackedScene" uid="uid://lec5jfnym86q" path="res://scenes/credits/CreditSection.tscn" id="2_8vc4u"]
 
 [sub_resource type="Theme" id="Theme_klb70"]
@@ -9,7 +9,7 @@ default_font_size = 20
 [sub_resource type="LabelSettings" id="LabelSettings_5fe7c"]
 
 [node name="Credits" type="Node2D"]
-script = ExtResource("1_5fe7c")
+script = ExtResource("1_8vc4u")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 320.0
