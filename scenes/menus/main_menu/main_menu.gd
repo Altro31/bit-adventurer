@@ -8,7 +8,7 @@ func _on_start_pressed():
 	get_tree().change_scene_to_file("res://scenes/levels/level_0.tscn")
 	
 func _on_credits_pressed():
-	get_tree().change_scene_to_file("res://scenes/credits/credits.tscn")
+	get_tree().change_scene_to_file("res://scenes/credits/Credits.tscn")
 
 func _on_exit_pressed():
 	get_tree().quit()

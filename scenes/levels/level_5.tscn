@@ -369,4 +369,5 @@ position = Vector2(478, 128)
 position = Vector2(206, 113)
 
 [node name="Player" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("9_vvoq0")]
+position = Vector2(11, 157)
 gui = NodePath("../GUI")

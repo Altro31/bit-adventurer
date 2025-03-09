@@ -1,8 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bde0cbmryrv5s"]
+[gd_scene load_steps=14 format=3 uid="uid://bde0cbmryrv5s"]
 
 [ext_resource type="PackedScene" uid="uid://bx4js885ycdt" path="res://scenes/game_scene/GameOver.tscn" id="2_dnslt"]
 [ext_resource type="Script" uid="uid://ic3ix7aksr3t" path="res://scenes/game_scene/game_ui.gd" id="2_dvsvq"]
+[ext_resource type="Texture2D" uid="uid://n4bup55dr0xx" path="res://assets/Controls/arrow_up.png" id="2_ul61k"]
+[ext_resource type="Texture2D" uid="uid://cjgd5my3oxdbj" path="res://assets/Controls/arrow_left.png" id="3_ul61k"]
 [ext_resource type="PackedScene" uid="uid://bm5s5afhhinh8" path="res://scenes/game_scene/Win.tscn" id="3_v20na"]
+[ext_resource type="Texture2D" uid="uid://dbms6nd81pem3" path="res://assets/Controls/arrow_rigth.png" id="4_vbgr5"]
 [ext_resource type="PackedScene" uid="uid://ct07ruhi06auo" path="res://scenes/game_scene/Pause.tscn" id="4_y85d6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n6rwg"]
@@ -13,6 +16,15 @@ font_size = 10
 
 [sub_resource type="Theme" id="Theme_o7nrm"]
 default_font_size = 8
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ul61k"]
+radius = 27.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vbgr5"]
+radius = 27.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bqcs8"]
+radius = 27.0
 
 [node name="GUI" type="CanvasLayer"]
 process_mode = 3
@@ -54,6 +66,39 @@ layout_mode = 2
 focus_mode = 0
 theme = SubResource("Theme_o7nrm")
 text = "||"
+
+[node name="Controls" type="MarginContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = -46.0
+offset_right = -18.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Jump" type="TouchScreenButton" parent="Controls"]
+position = Vector2(9, 0)
+texture_normal = ExtResource("2_ul61k")
+shape = SubResource("CircleShape2D_ul61k")
+action = "jump"
+visibility_mode = 1
+
+[node name="Left" type="TouchScreenButton" parent="Controls"]
+position = Vector2(196, -2)
+texture_normal = ExtResource("3_ul61k")
+shape = SubResource("CircleShape2D_vbgr5")
+action = "left"
+visibility_mode = 1
+
+[node name="Right" type="TouchScreenButton" parent="Controls"]
+position = Vector2(260, -1)
+texture_normal = ExtResource("4_vbgr5")
+shape = SubResource("CircleShape2D_bqcs8")
+action = "rigth"
+visibility_mode = 1
 
 [node name="GameOver" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("2_dnslt")]
 visible = false

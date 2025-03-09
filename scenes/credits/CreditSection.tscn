@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://lec5jfnym86q"]
+
+[ext_resource type="Script" uid="uid://dc3w4puov86qg" path="res://scenes/credits/credit_section.gd" id="1_hu64n"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hu64n"]
+font_size = 18
+
+[sub_resource type="LabelSettings" id="LabelSettings_wwyos"]
+font_size = 14
+
+[node name="CreditSection" type="VBoxContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 80.0
+grow_horizontal = 2
+alignment = 1
+script = ExtResource("1_hu64n")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 2
+text = "<title>"
+label_settings = SubResource("LabelSettings_hu64n")
+horizontal_alignment = 1
+
+[node name="Content" type="Label" parent="."]
+layout_mode = 2
+text = "<subtitle>"
+label_settings = SubResource("LabelSettings_wwyos")
+horizontal_alignment = 1

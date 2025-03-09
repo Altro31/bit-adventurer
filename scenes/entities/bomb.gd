@@ -1,7 +1,7 @@
 extends Area2D
 class_name Bomb
 
-@export var time: int = 3
+@export var time: int = 1
 
 var player: Player
 var onTime: bool = false

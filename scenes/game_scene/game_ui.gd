@@ -11,8 +11,10 @@ func _ready() -> void:
 	$Container/HBoxContainer/Level.text = "nivel "+level
 	score = GLOBAL.score
 	
+	#$Controls/Controls/HBoxContainer2/JumpButton.connect("button_up",)
+	
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_text_clear_carets_and_selection"):
+	if event.is_action_pressed("pause"):
 		_on_pause()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

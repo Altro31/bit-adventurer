@@ -40,11 +40,11 @@ func _process(delta: float) -> void:
 			motion_control()
 
 func get_axis()->Vector2:
-	axis.x = int(Input.is_action_pressed("ui_right")) -int(Input.is_action_pressed("ui_left"))
+	axis.x = int(Input.is_action_pressed("rigth")) -int(Input.is_action_pressed("left"))
 	return axis.normalized()
 
 func _input(event: InputEvent):
-	if not death and event.is_action_pressed("ui_accept"):
+	if not death and event.is_action_pressed("jump"):
 		if is_on_floor():
 			jump_control(1)
 		if not is_on_floor() and doubleJump:
