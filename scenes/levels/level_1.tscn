@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://3bd6350v3ux5" path="res://scenes/levels/level.gd" id="1_awc2m"]
 [ext_resource type="PackedScene" uid="uid://bde0cbmryrv5s" path="res://scenes/game_scene/game_ui.tscn" id="2_25nwi"]
 [ext_resource type="PackedScene" uid="uid://cevttteursd20" path="res://scenes/entities/Camera.tscn" id="3_ku07s"]
-[ext_resource type="PackedScene" uid="uid://b6xxovxgrmn5l" path="res://scenes/entities/Player.tscn" id="4_c1orr"]
 [ext_resource type="Texture2D" uid="uid://liam6u5dg0sh" path="res://assets/Spritesheet/tilemap.png" id="5_448iv"]
 [ext_resource type="PackedScene" uid="uid://coc8ncju34kfd" path="res://scenes/entities/Bomb.tscn" id="7_fmabn"]
 [ext_resource type="PackedScene" uid="uid://ciebf7nt68mck" path="res://scenes/entities/Spike.tscn" id="7_prm30"]
 [ext_resource type="PackedScene" uid="uid://c4bh7pnxcgtcu" path="res://scenes/entities/Goal.tscn" id="8_te4qt"]
 [ext_resource type="PackedScene" uid="uid://v53bn0mybp0y" path="res://scenes/entities/Coin.tscn" id="9_bpxah"]
+[ext_resource type="PackedScene" uid="uid://r6cv1kpl5kij" path="res://scenes/entities/Player2.tscn" id="9_dga24"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bliii"]
 texture = ExtResource("5_448iv")
@@ -356,10 +356,8 @@ position = Vector2(608, 98)
 [node name="Coin4" parent="Coins" instance=ExtResource("9_bpxah")]
 position = Vector2(304, 131)
 
-[node name="Player" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("4_c1orr")]
-position = Vector2(40, 139)
-gui = NodePath("../GUI")
-jump = 500
-
 [node name="Bomb" parent="." instance=ExtResource("7_fmabn")]
 position = Vector2(248, 144)
+
+[node name="Player" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("9_dga24")]
+gui = NodePath("../GUI")

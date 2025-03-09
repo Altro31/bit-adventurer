@@ -9,7 +9,7 @@ var won: bool = false
 
 @export_category("Configs")
 @export var speed: int = 148
-@export var gravity: int = 30
+@export var gravity: int = 25
 @export var jump: int = 368
 
 @export_category("Skills")
@@ -49,7 +49,7 @@ func _input(event: InputEvent):
 			jump_control(1)
 		if not is_on_floor() and doubleJump:
 			doubleJump = false
-			jump_control(0.75)
+			jump_control(1)
 	
 func death_control():
 	velocity.x = 0
