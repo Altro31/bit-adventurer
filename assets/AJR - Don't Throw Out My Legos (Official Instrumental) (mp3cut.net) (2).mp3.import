@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7r7vnq0os0t7"
+path="res://.godot/imported/AJR - Don't Throw Out My Legos (Official Instrumental) (mp3cut.net) (2).mp3-8214f87c2ddd3829648c71ae4bf23d25.mp3str"
+
+[deps]
+
+source_file="res://assets/AJR - Don't Throw Out My Legos (Official Instrumental) (mp3cut.net) (2).mp3"
+dest_files=["res://.godot/imported/AJR - Don't Throw Out My Legos (Official Instrumental) (mp3cut.net) (2).mp3-8214f87c2ddd3829648c71ae4bf23d25.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

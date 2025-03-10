@@ -17,6 +17,8 @@ var won: bool = false
 @export var ultraSpeed = false
 
 var disableDoubleJump: bool
+var freeze:bool = false
+@export var ultra_speed_power:float = 1.5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -57,13 +59,14 @@ func death_control():
 	move_and_slide()
 
 func motion_control():
-	if not get_axis().x == 0:
-		$Sprite.scale.x = get_axis().x
-	
-	if ultraSpeed:
-		velocity.x = 1.5 * speed
-	else:
-		velocity.x = get_axis().x * speed
+	velocity.x = 0
+	if not freeze:
+		if not get_axis().x == 0 and not ultraSpeed:
+			$Sprite.scale.x = get_axis().x
+		if ultraSpeed:
+			velocity.x = ultra_speed_power * speed
+		else:
+			velocity.x = get_axis().x * speed
 		
 	velocity.y += gravity
 	
@@ -71,7 +74,7 @@ func motion_control():
 	
 	match is_on_floor():
 		true:
-			if get_axis().x == 0 and not ultraSpeed:
+			if (get_axis().x == 0 and not ultraSpeed) or freeze:
 				$Sprite.play("idle")
 			else:
 				$Sprite.play("run")
@@ -112,3 +115,8 @@ func restoreDoubleJump():
 		
 func win():
 	won = true
+
+func toggle_freeze():
+	freeze = not freeze
+	if freeze:
+		$Sprite.play("idle")
