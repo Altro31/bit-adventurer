@@ -14,9 +14,9 @@ var won: bool = false
 
 @export_category("Skills")
 @export var doubleJump = true
+@export var ultraSpeed = false
 
 var disableDoubleJump: bool
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -59,15 +59,19 @@ func death_control():
 func motion_control():
 	if not get_axis().x == 0:
 		$Sprite.scale.x = get_axis().x
+	
+	if ultraSpeed:
+		velocity.x = 1.5 * speed
+	else:
+		velocity.x = get_axis().x * speed
 		
-	velocity.x = get_axis().x * speed
 	velocity.y += gravity
 	
 	move_and_slide()
 	
 	match is_on_floor():
 		true:
-			if get_axis().x == 0:
+			if get_axis().x == 0 and not ultraSpeed:
 				$Sprite.play("idle")
 			else:
 				$Sprite.play("run")
@@ -76,6 +80,13 @@ func motion_control():
 				$Sprite.play("jump")
 			else:
 				$Sprite.play("fall")
+				
+func ultraSpeed_control():
+	velocity.x = 1.5 * speed
+	velocity.y += gravity
+	
+	move_and_slide()
+	
 
 func jump_control(power: float):
 	velocity.y = -jump * power

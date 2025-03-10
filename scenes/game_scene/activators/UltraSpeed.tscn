@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw45lqcu1v8ec"]
+
+[ext_resource type="Script" uid="uid://ht8feqeove1f" path="res://scenes/game_scene/activators/ultra_speed.gd" id="1_8upln"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_w30kg"]
+b = Vector2(0, 179)
+
+[node name="UltraSpeed" type="Area2D"]
+script = ExtResource("1_8upln")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_w30kg")
+
+[connection signal="body_entered" from="." to="." method="body_entered"]
