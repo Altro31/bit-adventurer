@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ct07ruhi06auo"]
 
-[ext_resource type="Script" uid="uid://dp4b3j2prypob" path="res://scenes/game_scene/states_scenes.gd" id="1_j1imb"]
+[ext_resource type="Script" path="res://scenes/game_scene/states_scenes.gd" id="1_j1imb"]
 
 [node name="Pause" type="ColorRect"]
 anchors_preset = 15

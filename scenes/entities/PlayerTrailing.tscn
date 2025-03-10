@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3vrfgnjvajtk"]
+
+[ext_resource type="Texture2D" uid="uid://butbxbl5kb64g" path="res://assets/RedHood/tile16.png" id="1_ja1ow"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4jsb4"]
+blend_mode = 1
+
+[node name="PlayerTrailing" type="Sprite2D"]
+material = SubResource("CanvasItemMaterial_4jsb4")
+texture = ExtResource("1_ja1ow")

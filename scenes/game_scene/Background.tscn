@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bd3s0lyk3ge5x"]
 
-[ext_resource type="Script" uid="uid://c7qlp3yujef1w" path="res://scenes/game_scene/background.gd" id="1_3rgmm"]
+[ext_resource type="Script" path="res://scenes/game_scene/background.gd" id="1_3rgmm"]
 
 [node name="Background" type="TextureRect"]
 script = ExtResource("1_3rgmm")
