@@ -24,12 +24,14 @@ func _process(_delta: float) -> void:
 func game_over():
 	get_tree().paused = true
 	$GameOver.visible = true
+	$GameOver._play_game_over_music()
 	var tween: Tween = create_tween().set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
 	tween.tween_property($GameOver,"modulate",Color(1,1,1,0.8),1.0)
 
 func win():
 	$Win/Score.text = "puntuación: "+str(GLOBAL.score)
 	get_tree().paused = true
+	$Win._play_win_music()
 	$Win.visible = true
 	var tween: Tween = create_tween().set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
 	tween.tween_property($Win,"modulate",Color(1,1,1,0.8),1.0)

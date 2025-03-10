@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://cd2b5f54ttef2"]
+[gd_scene load_steps=15 format=4 uid="uid://cd2b5f54ttef2"]
 
 [ext_resource type="Script" uid="uid://3bd6350v3ux5" path="res://scenes/levels/level.gd" id="1_t54nl"]
 [ext_resource type="Texture2D" uid="uid://c8lywlara60lp" path="res://assets/1_Industrial_Tileset_1.png" id="2_tqnj0"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ciebf7nt68mck" path="res://scenes/entities/Spike.tscn" id="8_wmb60"]
 [ext_resource type="PackedScene" uid="uid://v53bn0mybp0y" path="res://scenes/entities/Coin.tscn" id="9_dknsk"]
 [ext_resource type="PackedScene" uid="uid://r6cv1kpl5kij" path="res://scenes/entities/Player2.tscn" id="9_vvoq0"]
+[ext_resource type="AudioStream" uid="uid://j40rcymq10x" path="res://ost/Yu_Gi_Oh_5Ds__-_Ost_-_Yusei_Theme(256k).mp3" id="11_dwyms"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6xwso"]
 texture = ExtResource("2_tqnj0")
@@ -381,3 +382,7 @@ position = Vector2(206, 113)
 [node name="Player" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("9_vvoq0")]
 position = Vector2(11, 157)
 gui = NodePath("../GUI")
+
+[node name="YuseiOst" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_dwyms")
+autoplay = true

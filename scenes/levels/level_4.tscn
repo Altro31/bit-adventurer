@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://ybcnleo484kc"]
+[gd_scene load_steps=15 format=4 uid="uid://ybcnleo484kc"]
 
 [ext_resource type="Script" uid="uid://3bd6350v3ux5" path="res://scenes/levels/level.gd" id="1_s55is"]
 [ext_resource type="Texture2D" uid="uid://c8lywlara60lp" path="res://assets/1_Industrial_Tileset_1.png" id="2_glw47"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ciebf7nt68mck" path="res://scenes/entities/Spike.tscn" id="8_0qqo1"]
 [ext_resource type="PackedScene" uid="uid://v53bn0mybp0y" path="res://scenes/entities/Coin.tscn" id="9_idk41"]
 [ext_resource type="PackedScene" uid="uid://r6cv1kpl5kij" path="res://scenes/entities/Player2.tscn" id="9_um320"]
+[ext_resource type="AudioStream" uid="uid://bcu8u8e471ra7" path="res://ost/#02_yugioh_VRAINS_SOUND_DUEL_3_-__SOULBURNER(256k).mp3" id="11_4wsov"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qvnao"]
 texture = ExtResource("2_glw47")
@@ -377,3 +378,7 @@ position = Vector2(206, 113)
 [node name="Player" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("9_um320")]
 position = Vector2(9, 157)
 gui = NodePath("../GUI")
+
+[node name="SoulburnnerOst" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_4wsov")
+autoplay = true

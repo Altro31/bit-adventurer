@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://bqyposrpfon15"]
+[gd_scene load_steps=16 format=4 uid="uid://bqyposrpfon15"]
 
 [ext_resource type="Script" uid="uid://3bd6350v3ux5" path="res://scenes/levels/level.gd" id="1_65ilt"]
 [ext_resource type="Texture2D" uid="uid://c8lywlara60lp" path="res://assets/1_Industrial_Tileset_1.png" id="3_qi5uv"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://v53bn0mybp0y" path="res://scenes/entities/Coin.tscn" id="9_rw4lp"]
 [ext_resource type="PackedScene" uid="uid://r6cv1kpl5kij" path="res://scenes/entities/Player2.tscn" id="10_2bnyt"]
 [ext_resource type="PackedScene" uid="uid://coc8ncju34kfd" path="res://scenes/entities/Bomb.tscn" id="10_to7bv"]
+[ext_resource type="AudioStream" uid="uid://bgcyywq6471o0" path="res://ost/FFVII_REMAKE__ハンドレッドガンナー(128k).mp3" id="12_qi5uv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t4txi"]
 texture = ExtResource("3_qi5uv")
@@ -382,3 +383,7 @@ position = Vector2(669, 145)
 [node name="Player" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("10_2bnyt")]
 position = Vector2(9, 158)
 gui = NodePath("../GUI")
+
+[node name="FF7BattleOst" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_qi5uv")
+autoplay = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://3fmmpu012sd7"]
+[gd_scene load_steps=15 format=4 uid="uid://3fmmpu012sd7"]
 
 [ext_resource type="Script" uid="uid://3bd6350v3ux5" path="res://scenes/levels/level.gd" id="1_p01r0"]
 [ext_resource type="Texture2D" uid="uid://c8lywlara60lp" path="res://assets/1_Industrial_Tileset_1.png" id="2_qsp8v"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cevttteursd20" path="res://scenes/entities/Camera.tscn" id="8_furso"]
 [ext_resource type="PackedScene" uid="uid://r6cv1kpl5kij" path="res://scenes/entities/Player2.tscn" id="9_3p04p"]
 [ext_resource type="PackedScene" uid="uid://bde0cbmryrv5s" path="res://scenes/game_scene/game_ui.tscn" id="9_i1shs"]
+[ext_resource type="AudioStream" uid="uid://cuor4ow5plvcj" path="res://ost/YU-GI-OH!_VRAINS_SOUND_DUEL_1-__03._Playmaker(256k).mp3" id="11_nt80m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qsp8v"]
 texture = ExtResource("2_qsp8v")
@@ -377,3 +378,7 @@ position = Vector2(206, 113)
 [node name="Player" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("9_3p04p")]
 position = Vector2(9, 156)
 gui = NodePath("../GUI")
+
+[node name="PlaymakerOst" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_nt80m")
+autoplay = true

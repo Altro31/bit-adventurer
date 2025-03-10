@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://ck74pbk747v5r"]
+[gd_scene load_steps=14 format=4 uid="uid://ck74pbk747v5r"]
 
 [ext_resource type="Script" uid="uid://3bd6350v3ux5" path="res://scenes/levels/level.gd" id="1_awc2m"]
 [ext_resource type="PackedScene" uid="uid://r6cv1kpl5kij" path="res://scenes/entities/Player2.tscn" id="2_6ayib"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dv83t773uhgn2" path="res://scenes/entities/Enemy.tscn" id="6_3ecv8"]
 [ext_resource type="PackedScene" uid="uid://ciebf7nt68mck" path="res://scenes/entities/Spike.tscn" id="7_prm30"]
 [ext_resource type="PackedScene" uid="uid://c4bh7pnxcgtcu" path="res://scenes/entities/Goal.tscn" id="8_te4qt"]
+[ext_resource type="AudioStream" uid="uid://dm6e8bwpc30g3" path="res://ost/Yu-Gi-Oh!_5D_s_Unreleased_OST_-_Synchro_Summon_Theme___Yusei_Fudo_V0(256k).mp3" id="10_p6rmu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_65guy"]
 texture = ExtResource("2_65guy")
@@ -339,3 +340,7 @@ gui = NodePath("../GUI")
 [node name="Player" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("2_6ayib")]
 position = Vector2(14, 161)
 gui = NodePath("../GUI")
+
+[node name="SyncrhoOst" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_p6rmu")
+autoplay = true

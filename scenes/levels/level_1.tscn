@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://ceq1oervk3kqu"]
+[gd_scene load_steps=15 format=4 uid="uid://ceq1oervk3kqu"]
 
 [ext_resource type="Script" uid="uid://3bd6350v3ux5" path="res://scenes/levels/level.gd" id="1_awc2m"]
 [ext_resource type="PackedScene" uid="uid://bde0cbmryrv5s" path="res://scenes/game_scene/game_ui.tscn" id="2_25nwi"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c4bh7pnxcgtcu" path="res://scenes/entities/Goal.tscn" id="8_te4qt"]
 [ext_resource type="PackedScene" uid="uid://v53bn0mybp0y" path="res://scenes/entities/Coin.tscn" id="9_bpxah"]
 [ext_resource type="PackedScene" uid="uid://r6cv1kpl5kij" path="res://scenes/entities/Player2.tscn" id="9_dga24"]
+[ext_resource type="AudioStream" uid="uid://dqqax05mm463a" path="res://ost/03_Yuya_s_Theme(256k).mp3" id="11_excbq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iav0o"]
 texture = ExtResource("2_qxy0u")
@@ -369,3 +370,7 @@ position = Vector2(248, 144)
 [node name="Player" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("9_dga24")]
 position = Vector2(8, 156)
 gui = NodePath("../GUI")
+
+[node name="YuyaOst" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_excbq")
+autoplay = true

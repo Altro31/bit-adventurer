@@ -6,6 +6,12 @@ func _on_restart():
 	GLOBAL.score = gui.score
 	get_tree().reload_current_scene()
 
+func _play_win_music():
+	$WinOst.play()
+	
+func _play_game_over_music():
+	$GameOverOst.play()
+
 func _on_exit():
 	get_tree().quit()
 

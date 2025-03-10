@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://byvydukidk6i2"]
+[gd_scene load_steps=8 format=3 uid="uid://byvydukidk6i2"]
 
+[ext_resource type="AudioStream" uid="uid://bjuj4lr61x3ra" path="res://ost/Final_Fantasy_VII_Rebirth___Title_Theme_Music(256k).mp3" id="2_flk2s"]
 [ext_resource type="Script" uid="uid://bdet8115mn02d" path="res://scenes/menus/main_menu/main_menu.gd" id="2_lk0wa"]
 
 [sub_resource type="Theme" id="Theme_ly41v"]
@@ -197,6 +198,10 @@ layout_mode = 2
 theme = SubResource("Theme_2rahr")
 text = "Salir"
 flat = true
+
+[node name="FF7TitleOst" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_flk2s")
+autoplay = true
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="Buttons/Start" to="." method="_on_start_pressed"]
