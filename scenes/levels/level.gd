@@ -1,10 +1,13 @@
 extends Node
 
+@export var level: int = 0
+
 var audio2 = false
 var player: Player
 
 func _ready():
 	get_tree().paused = false
+	
 
 
 func _on_01_finished() -> void:

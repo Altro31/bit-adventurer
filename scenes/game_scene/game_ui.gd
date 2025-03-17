@@ -30,7 +30,8 @@ func game_over():
 
 func win():
 	$Win/Score.text = "puntuación: "+str(GLOBAL.score)
-	get_tree().paused = true
+	get_tree().paused = true 
+	GLOBAL.progress = int(level) if GLOBAL.progress < int(level) else GLOBAL.progress
 	$Win._play_win_music()
 	$Win.visible = true
 	var tween: Tween = create_tween().set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
