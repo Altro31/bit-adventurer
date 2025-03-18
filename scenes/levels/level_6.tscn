@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://crpbul5r4i25o" path="res://scenes/levels/level_6.gd" id="1_m5qie"]
 [ext_resource type="PackedScene" uid="uid://bde0cbmryrv5s" path="res://scenes/game_scene/game_ui.tscn" id="2_741xk"]
 [ext_resource type="PackedScene" uid="uid://cevttteursd20" path="res://scenes/entities/Camera.tscn" id="3_i0fhw"]
-[ext_resource type="PackedScene" uid="uid://r6cv1kpl5kij" path="res://scenes/entities/Player2.tscn" id="4_5wshb"]
+[ext_resource type="PackedScene" path="res://scenes/entities/Player2.tscn" id="4_5wshb"]
 [ext_resource type="AudioStream" uid="uid://dy6a2ymq3ifcb" path="res://assets/01.mp3" id="5_7x7cx"]
 [ext_resource type="PackedScene" uid="uid://dw45lqcu1v8ec" path="res://scenes/game_scene/activators/UltraSpeed.tscn" id="6_5wshb"]
 [ext_resource type="AudioStream" uid="uid://7r7vnq0os0t7" path="res://assets/AJR - Don't Throw Out My Legos (Official Instrumental) (mp3cut.net) (2).mp3" id="6_b6i88"]

@@ -150,10 +150,9 @@ script = ExtResource("2_lk0wa")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 2
-offset_left = 75.0
-offset_top = 13.0
-offset_right = 248.0
-offset_bottom = 47.0
+offset_left = 73.0
+offset_right = 246.0
+offset_bottom = 34.0
 theme = SubResource("Theme_ly41v")
 theme_override_fonts/font = SubResource("FontFile_1fbtg")
 theme_override_font_sizes/font_size = 25
@@ -177,17 +176,18 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -140.0
-offset_top = -123.0
-offset_right = -13.0
-offset_bottom = -11.0
+offset_left = -103.0
+offset_top = -146.0
+offset_right = -5.0
+offset_bottom = -5.0
 grow_horizontal = 0
 grow_vertical = 0
+alignment = 1
 
 [node name="Start" type="Button" parent="Buttons"]
 layout_mode = 2
 theme = SubResource("Theme_b16a8")
-text = "Comenzar"
+text = "Nueva Partida"
 flat = true
 
 [node name="Continue" type="Button" parent="Buttons"]
@@ -200,7 +200,7 @@ flat = true
 [node name="Nivels" type="Button" parent="Buttons"]
 layout_mode = 2
 theme = SubResource("Theme_xmv3j")
-text = "Cargar niveles"
+text = "Niveles"
 flat = true
 
 [node name="Credits" type="Button" parent="Buttons"]

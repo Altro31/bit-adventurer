@@ -3,7 +3,6 @@ extends Control
 func _on_ready():
 	$Buttons/Start.grab_focus()
 	$Buttons/Continue.visible = GLOBAL.progress > 0
-	$Buttons/Start.visible = GLOBAL.progress == 0
 	
 func _on_start_pressed():
 	GLOBAL.progress = 0
