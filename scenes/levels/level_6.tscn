@@ -53,7 +53,20 @@ ultra_speed_power = 1.2
 
 [node name="Speed" parent="Player" index="3"]
 visible = true
+emitting = true
+amount = 1000
 lifetime_randomness = 0.0
+
+[node name="Speed2" type="CPUParticles2D" parent="Player"]
+position = Vector2(-3, -14)
+scale = Vector2(-1, -1)
+amount = 1000
+speed_scale = 0.5
+randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 12.23
+gravity = Vector2(-500, 0)
+color = Color(1, 1, 0.188235, 1)
 
 [node name="UltraSpeed" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("6_5wshb")]
 position = Vector2(1161, -331)
