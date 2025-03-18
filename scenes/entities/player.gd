@@ -120,3 +120,6 @@ func toggle_freeze():
 	freeze = not freeze
 	if freeze:
 		$Sprite.play("idle")
+		
+func get_speed_node() -> CPUParticles2D:
+	return $Speed

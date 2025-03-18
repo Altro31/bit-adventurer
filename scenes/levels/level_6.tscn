@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=4 uid="uid://gshh4qq7y840"]
 
 [ext_resource type="PackedScene" uid="uid://dcqow87bnnoa3" path="res://scenes/tiles/Basic.tscn" id="1_gfuhv"]
-[ext_resource type="Script" uid="uid://3bd6350v3ux5" path="res://scenes/levels/level.gd" id="1_i0fhw"]
+[ext_resource type="Script" uid="uid://crpbul5r4i25o" path="res://scenes/levels/level_6.gd" id="1_m5qie"]
 [ext_resource type="PackedScene" uid="uid://bde0cbmryrv5s" path="res://scenes/game_scene/game_ui.tscn" id="2_741xk"]
 [ext_resource type="PackedScene" uid="uid://cevttteursd20" path="res://scenes/entities/Camera.tscn" id="3_i0fhw"]
 [ext_resource type="PackedScene" uid="uid://r6cv1kpl5kij" path="res://scenes/entities/Player2.tscn" id="4_5wshb"]
@@ -15,7 +15,7 @@
 a = Vector2(-1, -188)
 
 [node name="Level6" type="Node2D"]
-script = ExtResource("1_i0fhw")
+script = ExtResource("1_m5qie")
 
 [node name="Tiles" type="Node2D" parent="."]
 
@@ -51,6 +51,10 @@ position = Vector2(20, 156)
 gui = NodePath("../GUI")
 ultra_speed_power = 1.2
 
+[node name="Speed" parent="Player" index="3"]
+visible = true
+lifetime_randomness = 0.0
+
 [node name="UltraSpeed" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("6_5wshb")]
 position = Vector2(1161, -331)
 gui = NodePath("../GUI")
@@ -64,6 +68,11 @@ power = 1.2
 [node name="UltraSpeed3" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("6_5wshb")]
 position = Vector2(4076, -98)
 gui = NodePath("../GUI")
+
+[node name="UltraSpeed4" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("6_5wshb")]
+position = Vector2(10243, 1132)
+gui = NodePath("../GUI")
+power = 2.0
 
 [node name="ActivarAudio02" type="Area2D" parent="."]
 monitorable = false
@@ -432,4 +441,10 @@ rotation = -1.57079
 
 [connection signal="finished" from="Camera/Audio/Audio01" to="." method="_on_01_finished"]
 [connection signal="finished" from="Camera/Audio/Audio02" to="." method="_on_audio_02_finished"]
+[connection signal="body_entered" from="UltraSpeed2" to="." method="_on_ultra_speed_body_entered"]
+[connection signal="body_entered" from="UltraSpeed3" to="." method="_on_ultra_speed_3_body_entered"]
+[connection signal="body_entered" from="UltraSpeed4" to="." method="_on_ultra_speed_4_body_entered"]
 [connection signal="body_entered" from="ActivarAudio02" to="." method="_on_audio_02_activate"]
+
+[editable path="Player"]
+[editable path="UltraSpeed2"]
