@@ -178,7 +178,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -140.0
-offset_top = -124.0
+offset_top = -123.0
+offset_right = -13.0
+offset_bottom = -11.0
 grow_horizontal = 0
 grow_vertical = 0
 
@@ -198,7 +200,7 @@ flat = true
 [node name="Nivels" type="Button" parent="Buttons"]
 layout_mode = 2
 theme = SubResource("Theme_xmv3j")
-text = "Niveles"
+text = "Cargar niveles"
 flat = true
 
 [node name="Credits" type="Button" parent="Buttons"]
