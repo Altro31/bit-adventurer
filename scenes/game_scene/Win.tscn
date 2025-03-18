@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bm5s5afhhinh8"]
 
-[ext_resource type="Script" path="res://scenes/game_scene/states_scenes.gd" id="1_b0cao"]
+[ext_resource type="Script" uid="uid://dp4b3j2prypob" path="res://scenes/game_scene/states_scenes.gd" id="1_b0cao"]
 [ext_resource type="AudioStream" uid="uid://xoad070icg8j" path="res://ost/Final_Fantasy_VII_-_Victory_Fanfare_[HD](256k).mp3" id="2_dhqas"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dhqas"]

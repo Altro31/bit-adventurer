@@ -10,7 +10,7 @@ func _play_win_music():
 	$WinOst.play()
 	
 func _play_game_over_music():
-	$GameOverOst.play()
+	$GameOverOst.play(2.5)
 
 func _on_exit():
 	get_tree().quit()

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cdibp2ucw8klt"]
 
-[ext_resource type="Script" path="res://scenes/menus/levels/menu_level.gd" id="1_r7hsf"]
+[ext_resource type="Script" uid="uid://c7a1i5cx0biqd" path="res://scenes/menus/levels/menu_level.gd" id="1_r7hsf"]
 
 [sub_resource type="Theme" id="Theme_8rqy6"]
 default_font_size = 12

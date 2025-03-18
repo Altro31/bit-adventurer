@@ -18,7 +18,7 @@ func _on_exit_pressed():
 
 
 func _on_continue_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/levels/level_"+str(GLOBAL.progress+1)+".tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/level_"+str(GLOBAL.progress)+".tscn")
 
 
 func _on_nivels_pressed() -> void:

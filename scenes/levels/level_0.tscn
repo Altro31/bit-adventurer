@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=4 uid="uid://ck74pbk747v5r"]
 
-[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_awc2m"]
+[ext_resource type="Script" uid="uid://3bd6350v3ux5" path="res://scenes/levels/level.gd" id="1_awc2m"]
 [ext_resource type="PackedScene" uid="uid://r6cv1kpl5kij" path="res://scenes/entities/Player2.tscn" id="2_6ayib"]
 [ext_resource type="PackedScene" uid="uid://bde0cbmryrv5s" path="res://scenes/game_scene/game_ui.tscn" id="2_25nwi"]
 [ext_resource type="Texture2D" uid="uid://c8lywlara60lp" path="res://assets/1_Industrial_Tileset_1.png" id="2_65guy"]

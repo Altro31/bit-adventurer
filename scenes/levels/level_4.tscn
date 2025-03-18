@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=4 uid="uid://ybcnleo484kc"]
 
-[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_s55is"]
+[ext_resource type="Script" uid="uid://3bd6350v3ux5" path="res://scenes/levels/level.gd" id="1_s55is"]
 [ext_resource type="Texture2D" uid="uid://c8lywlara60lp" path="res://assets/1_Industrial_Tileset_1.png" id="2_glw47"]
 [ext_resource type="Texture2D" uid="uid://bgkm40i5d3cwl" path="res://assets/1_Industrial_Tileset_1B.png" id="3_4wsov"]
 [ext_resource type="PackedScene" uid="uid://cevttteursd20" path="res://scenes/entities/Camera.tscn" id="4_8absu"]
