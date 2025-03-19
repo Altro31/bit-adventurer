@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3sssn7sjn1jc"]
+
+[ext_resource type="AudioStream" uid="uid://bjuj4lr61x3ra" path="res://ost/Final_Fantasy_VII_Rebirth___Title_Theme_Music(256k).mp3" id="1_4fceg"]
+
+[node name="Audio" type="Node2D"]
+
+[node name="FF7TitleOst" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_4fceg")
