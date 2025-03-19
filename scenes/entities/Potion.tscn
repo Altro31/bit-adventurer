@@ -1,0 +1,71 @@
+[gd_scene load_steps=14 format=3 uid="uid://dw28d4t1pgjec"]
+
+[ext_resource type="Texture2D" uid="uid://swkm60l3brd3" path="res://assets/PNG/vfx_effect_coin_1.png" id="1_yfa5g"]
+[ext_resource type="Texture2D" uid="uid://c1gc4kih2npa1" path="res://assets/PNG/vfx_effect_coin_2.png" id="2_40iwv"]
+[ext_resource type="Texture2D" uid="uid://t4adredctgyp" path="res://assets/PNG/vfx_effect_coin_3.png" id="3_pgcdo"]
+[ext_resource type="Texture2D" uid="uid://bg63qjj7ho5fy" path="res://assets/PNG/vfx_effect_coin_4.png" id="4_blqd3"]
+[ext_resource type="Texture2D" uid="uid://cggg7g854qta8" path="res://assets/PNG/collectibles_potion_red_1.png" id="5_c0dpj"]
+[ext_resource type="Texture2D" uid="uid://c5fefj38l57tl" path="res://assets/PNG/collectibles_potion_red_2.png" id="6_ct85y"]
+[ext_resource type="Texture2D" uid="uid://deb23jrus8ega" path="res://assets/PNG/collectibles_potion_red_3.png" id="7_dosw1"]
+[ext_resource type="Texture2D" uid="uid://2y3ynm7yf6xm" path="res://assets/PNG/collectibles_potion_red_4.png" id="8_h850h"]
+[ext_resource type="Texture2D" uid="uid://bct7vn3rpbwr5" path="res://assets/PNG/collectibles_potion_red_5.png" id="9_u34le"]
+[ext_resource type="Texture2D" uid="uid://dmeviegl21c6w" path="res://assets/PNG/collectibles_potion_red_6.png" id="10_xdei8"]
+[ext_resource type="Texture2D" uid="uid://b35vt2wudu2e5" path="res://assets/PNG/collectibles_potion_red_7.png" id="11_tbjnr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vy5sw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yfa5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_40iwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pgcdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_blqd3")
+}],
+"loop": false,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_c0dpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ct85y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dosw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_h850h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_u34le")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xdei8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tbjnr")
+}],
+"loop": true,
+"name": &"on ",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3tm5t"]
+
+[node name="Potion" type="Area2D"]
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vy5sw")
+animation = &"off"
+autoplay = "on "
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3tm5t")
