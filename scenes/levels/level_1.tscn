@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://v53bn0mybp0y" path="res://scenes/entities/Coin.tscn" id="9_bpxah"]
 [ext_resource type="PackedScene" uid="uid://r6cv1kpl5kij" path="res://scenes/entities/Player2.tscn" id="9_dga24"]
 [ext_resource type="AudioStream" uid="uid://dqqax05mm463a" path="res://ost/03_Yuya_s_Theme(256k).mp3" id="11_excbq"]
-[ext_resource type="PackedScene" uid="uid://hb4g28ikc74m" path="res://scenes/entities/D_green.tscn" id="12_iav0o"]
+[ext_resource type="PackedScene" path="res://scenes/entities/D_green.tscn" id="12_iav0o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iav0o"]
 texture = ExtResource("2_qxy0u")
