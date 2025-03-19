@@ -379,7 +379,6 @@ rotation = 3.14279
 
 [node name="Coin" parent="Coins" instance=ExtResource("7_nqyvv")]
 position = Vector2(895, 18)
-score = 200
 
 [node name="Coin4" parent="Coins" instance=ExtResource("7_nqyvv")]
 position = Vector2(206, 113)
