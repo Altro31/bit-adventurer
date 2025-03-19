@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bcwk786rwgp4y"]
 
 [ext_resource type="Script" uid="uid://bi2xv8kqeej4k" path="res://scenes/credits/credits.gd" id="1_8vc4u"]
-[ext_resource type="PackedScene" path="res://scenes/credits/CreditSection.tscn" id="2_8vc4u"]
+[ext_resource type="PackedScene" uid="uid://lec5jfnym86q" path="res://scenes/credits/CreditSection.tscn" id="2_8vc4u"]
 
 [sub_resource type="Theme" id="Theme_klb70"]
 default_font_size = 20
