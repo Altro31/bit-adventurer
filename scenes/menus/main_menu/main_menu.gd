@@ -19,6 +19,7 @@ func _on_credits_pressed():
 
 func _on_exit_pressed():
 	get_tree().quit()
+	GLOBAL.save_config_data()
 
 
 func _on_continue_pressed() -> void:

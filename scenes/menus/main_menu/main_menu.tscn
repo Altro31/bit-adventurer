@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cq4xymm2xmfix"]
 
-[ext_resource type="Script" uid="uid://bdet8115mn02d" path="res://scenes/menus/main_menu/main_menu.gd" id="2_lk0wa"]
+[ext_resource type="Script" path="res://scenes/menus/main_menu/main_menu.gd" id="2_lk0wa"]
 [ext_resource type="Texture2D" uid="uid://ywfud0q4p824" path="res://assets/fondo/AMOLED Minimal Wallpaper.jpeg" id="2_peecx"]
 [ext_resource type="Texture2D" uid="uid://bjiyx2tfp6fht" path="res://assets/RedHood/tile00.png" id="4_peecx"]
 
