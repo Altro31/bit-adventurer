@@ -371,7 +371,6 @@ position = Vector2(1632, 76)
 
 [node name="Coin" parent="Coins" instance=ExtResource("9_rw4lp")]
 position = Vector2(864, 131)
-score = 200
 
 [node name="Coin2" parent="Coins" instance=ExtResource("9_rw4lp")]
 position = Vector2(719, 82)

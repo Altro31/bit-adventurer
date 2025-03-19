@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://dw28d4t1pgjec"]
+[gd_scene load_steps=15 format=3 uid="uid://dw28d4t1pgjec"]
 
+[ext_resource type="Script" uid="uid://cawgd33acctvx" path="res://scenes/entities/potion.gd" id="1_40iwv"]
 [ext_resource type="Texture2D" uid="uid://swkm60l3brd3" path="res://assets/PNG/vfx_effect_coin_1.png" id="1_yfa5g"]
 [ext_resource type="Texture2D" uid="uid://c1gc4kih2npa1" path="res://assets/PNG/vfx_effect_coin_2.png" id="2_40iwv"]
 [ext_resource type="Texture2D" uid="uid://t4adredctgyp" path="res://assets/PNG/vfx_effect_coin_3.png" id="3_pgcdo"]
@@ -61,6 +62,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_3tm5t"]
 
 [node name="Potion" type="Area2D"]
+script = ExtResource("1_40iwv")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vy5sw")
