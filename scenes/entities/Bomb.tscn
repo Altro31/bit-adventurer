@@ -104,7 +104,6 @@ script = ExtResource("1_q21df")
 sprite_frames = SubResource("SpriteFrames_r6iu6")
 animation = &"alert"
 autoplay = "idle"
-frame_progress = 0.212191
 
 [node name="Activation" type="CollisionShape2D" parent="."]
 position = Vector2(-6, -31.5625)

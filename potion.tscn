@@ -1,7 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjlk1dome3ehp"]
+[gd_scene load_steps=3 format=3 uid="uid://bprv03wtabl7q"]
 
 [ext_resource type="PackedScene" uid="uid://dw28d4t1pgjec" path="res://scenes/entities/Potion.tscn" id="1_174ht"]
-[ext_resource type="Script" uid="uid://b18w1dpucy31b" path="res://potion.gd" id="2_8parx"]
+
+[sub_resource type="GDScript" id="GDScript_hx3lr"]
+script/source = "extends Area2D
+
+func _on_player_entered(body):
+	if body is Player:
+		body.speed = 250
+		print(\"Hola\")
+		$Sprite.play(\"off\")
+		$Collision.set_deferred(\"disabled\",true)
+"
 
 [node name="Potion" instance=ExtResource("1_174ht")]
-script = ExtResource("2_8parx")
+collision_layer = 8
+script = SubResource("GDScript_hx3lr")
+
+[node name="Sprite" parent="." index="0"]
+animation = &"on "
+
+[connection signal="body_entered" from="." to="." method="_on_player_entered"]

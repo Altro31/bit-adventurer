@@ -13,7 +13,7 @@ config_version=5
 config/name="Bit Adventurer"
 config/version="0.0.1"
 run/main_scene="uid://cq4xymm2xmfix"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.3", "Forward Plus")
 run/max_fps=60
 config/icon="uid://cu80q1y56oyc1"
 
