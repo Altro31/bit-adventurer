@@ -1,0 +1,69 @@
+[gd_scene load_steps=13 format=3 uid="uid://3upcnndb3txj"]
+
+[ext_resource type="Script" uid="uid://dxan5q64iek70" path="res://scenes/entities/diamonds.gd" id="1_vk7jx"]
+[ext_resource type="Texture2D" uid="uid://swkm60l3brd3" path="res://assets/PNG/vfx_effect_coin_1.png" id="2_fcdbq"]
+[ext_resource type="Texture2D" uid="uid://c1gc4kih2npa1" path="res://assets/PNG/vfx_effect_coin_2.png" id="3_7ej8o"]
+[ext_resource type="Texture2D" uid="uid://t4adredctgyp" path="res://assets/PNG/vfx_effect_coin_3.png" id="4_5lmj4"]
+[ext_resource type="Texture2D" uid="uid://bg63qjj7ho5fy" path="res://assets/PNG/vfx_effect_coin_4.png" id="5_6yhxp"]
+[ext_resource type="Texture2D" uid="uid://ckjpk88t11uat" path="res://assets/PNG/collectibles_treasure_diamond_1.png" id="6_85vmg"]
+[ext_resource type="Texture2D" uid="uid://bynv5jxubaq5k" path="res://assets/PNG/collectibles_treasure_diamond_2.png" id="7_v54v1"]
+[ext_resource type="Texture2D" uid="uid://cqa5vw7fp6sut" path="res://assets/PNG/collectibles_treasure_diamond_3.png" id="8_bys08"]
+[ext_resource type="Texture2D" uid="uid://cmatqjpvmp4t0" path="res://assets/PNG/collectibles_treasure_diamond_4.png" id="9_fpia7"]
+[ext_resource type="Texture2D" uid="uid://dq03kwe0bl473" path="res://assets/PNG/collectibles_treasure_diamond_5.png" id="10_tebb2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v75ux"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fcdbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7ej8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5lmj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6yhxp")
+}],
+"loop": false,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_85vmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_v54v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bys08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fpia7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tebb2")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g7vlj"]
+
+[node name="Diamonds" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_vk7jx")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_v75ux")
+animation = &"on"
+autoplay = "on"
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+shape = SubResource("CircleShape2D_g7vlj")
+
+[connection signal="body_entered" from="." to="." method="_on_player_entered"]
