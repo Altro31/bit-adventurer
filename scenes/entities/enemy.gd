@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name Enemy
 
 @export var health: int = 1
-@export var score: int = 100
+@export var score: int = 70
 
 @export var speed: int = 16
 @export var gravity: int = 16

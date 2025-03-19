@@ -1,14 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://v53bn0mybp0y"]
+[gd_scene load_steps=13 format=3 uid="uid://v53bn0mybp0y"]
 
 [ext_resource type="Script" uid="uid://cxycc72nk07op" path="res://scenes/entities/coin.gd" id="1_qd7hd"]
-[ext_resource type="Texture2D" uid="uid://c152hymfufn13" path="res://assets/PNG/collectibles_coin_gold_1.png" id="2_0nxpa"]
 [ext_resource type="Texture2D" uid="uid://swkm60l3brd3" path="res://assets/PNG/vfx_effect_coin_1.png" id="2_byfnk"]
 [ext_resource type="Texture2D" uid="uid://c1gc4kih2npa1" path="res://assets/PNG/vfx_effect_coin_2.png" id="3_8t8gw"]
-[ext_resource type="Texture2D" uid="uid://mkwghnnwxl5t" path="res://assets/PNG/collectibles_coin_gold_2.png" id="3_ryxpn"]
-[ext_resource type="Texture2D" uid="uid://67qwniyxgkgx" path="res://assets/PNG/collectibles_coin_gold_3.png" id="4_8uyhq"]
 [ext_resource type="Texture2D" uid="uid://t4adredctgyp" path="res://assets/PNG/vfx_effect_coin_3.png" id="4_q78th"]
 [ext_resource type="Texture2D" uid="uid://bg63qjj7ho5fy" path="res://assets/PNG/vfx_effect_coin_4.png" id="5_rs2pm"]
-[ext_resource type="Texture2D" uid="uid://dopwm0l7y4ypj" path="res://assets/PNG/collectibles_coin_gold_4.png" id="5_y6f3r"]
+[ext_resource type="Texture2D" uid="uid://ckjpk88t11uat" path="res://assets/PNG/collectibles_treasure_diamond_1.png" id="6_647ip"]
+[ext_resource type="Texture2D" uid="uid://bynv5jxubaq5k" path="res://assets/PNG/collectibles_treasure_diamond_2.png" id="7_u3p7m"]
+[ext_resource type="Texture2D" uid="uid://cqa5vw7fp6sut" path="res://assets/PNG/collectibles_treasure_diamond_3.png" id="8_b66rh"]
+[ext_resource type="Texture2D" uid="uid://cmatqjpvmp4t0" path="res://assets/PNG/collectibles_treasure_diamond_4.png" id="9_h4b42"]
+[ext_resource type="Texture2D" uid="uid://dq03kwe0bl473" path="res://assets/PNG/collectibles_treasure_diamond_5.png" id="10_76dq8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o0f6j"]
 animations = [{
@@ -31,16 +32,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_0nxpa")
+"texture": ExtResource("6_647ip")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_ryxpn")
+"texture": ExtResource("7_u3p7m")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_8uyhq")
+"texture": ExtResource("8_b66rh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_y6f3r")
+"texture": ExtResource("9_h4b42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_76dq8")
 }],
 "loop": true,
 "name": &"on",
@@ -57,10 +61,11 @@ script = ExtResource("1_qd7hd")
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_o0f6j")
-animation = &"off"
+animation = &"on"
 autoplay = "on"
 
 [node name="Collision" type="CollisionShape2D" parent="."]
+light_mask = 8
 position = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_x6l7a")
 

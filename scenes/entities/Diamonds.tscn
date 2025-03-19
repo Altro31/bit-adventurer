@@ -1,15 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://3upcnndb3txj"]
+[gd_scene load_steps=12 format=3 uid="uid://3upcnndb3txj"]
 
 [ext_resource type="Script" uid="uid://dxan5q64iek70" path="res://scenes/entities/diamonds.gd" id="1_vk7jx"]
 [ext_resource type="Texture2D" uid="uid://swkm60l3brd3" path="res://assets/PNG/vfx_effect_coin_1.png" id="2_fcdbq"]
 [ext_resource type="Texture2D" uid="uid://c1gc4kih2npa1" path="res://assets/PNG/vfx_effect_coin_2.png" id="3_7ej8o"]
 [ext_resource type="Texture2D" uid="uid://t4adredctgyp" path="res://assets/PNG/vfx_effect_coin_3.png" id="4_5lmj4"]
 [ext_resource type="Texture2D" uid="uid://bg63qjj7ho5fy" path="res://assets/PNG/vfx_effect_coin_4.png" id="5_6yhxp"]
-[ext_resource type="Texture2D" uid="uid://ckjpk88t11uat" path="res://assets/PNG/collectibles_treasure_diamond_1.png" id="6_85vmg"]
-[ext_resource type="Texture2D" uid="uid://bynv5jxubaq5k" path="res://assets/PNG/collectibles_treasure_diamond_2.png" id="7_v54v1"]
-[ext_resource type="Texture2D" uid="uid://cqa5vw7fp6sut" path="res://assets/PNG/collectibles_treasure_diamond_3.png" id="8_bys08"]
-[ext_resource type="Texture2D" uid="uid://cmatqjpvmp4t0" path="res://assets/PNG/collectibles_treasure_diamond_4.png" id="9_fpia7"]
-[ext_resource type="Texture2D" uid="uid://dq03kwe0bl473" path="res://assets/PNG/collectibles_treasure_diamond_5.png" id="10_tebb2"]
+[ext_resource type="Texture2D" uid="uid://dfe3b7ryk7ujw" path="res://assets/PNG/collectibles_coin_silver_1.png" id="6_jvk4c"]
+[ext_resource type="Texture2D" uid="uid://cjf0ljbrsv08b" path="res://assets/PNG/collectibles_coin_silver_2.png" id="7_fcdbq"]
+[ext_resource type="Texture2D" uid="uid://bwhymxghswcd0" path="res://assets/PNG/collectibles_coin_silver_3.png" id="8_7ej8o"]
+[ext_resource type="Texture2D" uid="uid://by111hbqyyfgj" path="res://assets/PNG/collectibles_coin_silver_4.png" id="9_5lmj4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v75ux"]
 animations = [{
@@ -32,19 +31,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_85vmg")
+"texture": ExtResource("6_jvk4c")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_v54v1")
+"texture": ExtResource("7_fcdbq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_bys08")
+"texture": ExtResource("8_7ej8o")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_fpia7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_tebb2")
+"texture": ExtResource("9_5lmj4")
 }],
 "loop": true,
 "name": &"on",
