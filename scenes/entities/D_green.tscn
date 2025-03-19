@@ -1,0 +1,66 @@
+[gd_scene load_steps=12 format=3 uid="uid://hb4g28ikc74m"]
+
+[ext_resource type="Script" uid="uid://n7vjidpnx647" path="res://scenes/entities/d_green.gd" id="1_82jy5"]
+[ext_resource type="Texture2D" uid="uid://ccjjbaxrgd7j8" path="res://assets/PNG/collectibles_treasure_emerald_1.png" id="2_u44c0"]
+[ext_resource type="Texture2D" uid="uid://baqymd7o2v27t" path="res://assets/PNG/collectibles_treasure_emerald_2.png" id="3_nmrsb"]
+[ext_resource type="Texture2D" uid="uid://b686r16mkayrw" path="res://assets/PNG/collectibles_treasure_emerald_3.png" id="4_62snv"]
+[ext_resource type="Texture2D" uid="uid://c2beihpn2jf1w" path="res://assets/PNG/collectibles_treasure_emerald_4.png" id="5_lgchb"]
+[ext_resource type="Texture2D" uid="uid://swkm60l3brd3" path="res://assets/PNG/vfx_effect_coin_1.png" id="6_6v4if"]
+[ext_resource type="Texture2D" uid="uid://c1gc4kih2npa1" path="res://assets/PNG/vfx_effect_coin_2.png" id="7_vfhnv"]
+[ext_resource type="Texture2D" uid="uid://t4adredctgyp" path="res://assets/PNG/vfx_effect_coin_3.png" id="8_keran"]
+[ext_resource type="Texture2D" uid="uid://bg63qjj7ho5fy" path="res://assets/PNG/vfx_effect_coin_4.png" id="9_bqe70"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_in3no"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_6v4if")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vfhnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_keran")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bqe70")
+}],
+"loop": false,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_u44c0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nmrsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_62snv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lgchb")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4f4bw"]
+radius = 13.0
+
+[node name="DGreen" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_82jy5")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_in3no")
+animation = &"on"
+autoplay = "on"
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+light_mask = 8
+shape = SubResource("CircleShape2D_4f4bw")
+
+[connection signal="body_entered" from="." to="." method="_on_player_entered"]
