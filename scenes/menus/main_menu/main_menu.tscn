@@ -1,6 +1,5 @@
-[gd_scene load_steps=11 format=3 uid="uid://byvydukidk6i2"]
+[gd_scene load_steps=10 format=3 uid="uid://cq4xymm2xmfix"]
 
-[ext_resource type="AudioStream" uid="uid://bjuj4lr61x3ra" path="res://ost/Final_Fantasy_VII_Rebirth___Title_Theme_Music(256k).mp3" id="2_flk2s"]
 [ext_resource type="Script" uid="uid://bdet8115mn02d" path="res://scenes/menus/main_menu/main_menu.gd" id="2_lk0wa"]
 [ext_resource type="Texture2D" uid="uid://ywfud0q4p824" path="res://assets/fondo/AMOLED Minimal Wallpaper.jpeg" id="2_peecx"]
 [ext_resource type="Texture2D" uid="uid://bjiyx2tfp6fht" path="res://assets/RedHood/tile00.png" id="4_peecx"]
@@ -220,10 +219,6 @@ layout_mode = 2
 theme = SubResource("Theme_2rahr")
 text = "Salir"
 flat = true
-
-[node name="FF7TitleOst" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_flk2s")
-autoplay = true
 
 [node name="Tile00" type="Sprite2D" parent="."]
 position = Vector2(98, 95)
