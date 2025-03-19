@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c8lywlara60lp" path="res://assets/1_Industrial_Tileset_1.png" id="2_qsp8v"]
 [ext_resource type="Texture2D" uid="uid://bgkm40i5d3cwl" path="res://assets/1_Industrial_Tileset_1B.png" id="3_nt80m"]
 [ext_resource type="PackedScene" uid="uid://ciebf7nt68mck" path="res://scenes/entities/Spike.tscn" id="4_ejw2t"]
-[ext_resource type="PackedScene" uid="uid://hb4g28ikc74m" path="res://scenes/entities/D_green.tscn" id="4_r88tb"]
+[ext_resource type="PackedScene" path="res://scenes/entities/D_green.tscn" id="4_r88tb"]
 [ext_resource type="PackedScene" uid="uid://dv83t773uhgn2" path="res://scenes/entities/Enemy.tscn" id="6_67vai"]
 [ext_resource type="PackedScene" uid="uid://c4bh7pnxcgtcu" path="res://scenes/entities/Goal.tscn" id="6_xuaek"]
 [ext_resource type="PackedScene" uid="uid://v53bn0mybp0y" path="res://scenes/entities/Coin.tscn" id="7_nqyvv"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bde0cbmryrv5s" path="res://scenes/game_scene/game_ui.tscn" id="9_i1shs"]
 [ext_resource type="AudioStream" uid="uid://cuor4ow5plvcj" path="res://ost/YU-GI-OH!_VRAINS_SOUND_DUEL_1-__03._Playmaker(256k).mp3" id="11_nt80m"]
 [ext_resource type="PackedScene" uid="uid://coc8ncju34kfd" path="res://scenes/entities/Bomb.tscn" id="12_tv7cl"]
-[ext_resource type="PackedScene" uid="uid://3upcnndb3txj" path="res://scenes/entities/Diamonds.tscn" id="13_r88tb"]
+[ext_resource type="PackedScene" path="res://scenes/entities/Diamonds.tscn" id="13_r88tb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qsp8v"]
 texture = ExtResource("2_qsp8v")
